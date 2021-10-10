@@ -24,6 +24,12 @@ public class Task {
         this.interval = interval;
     }
 
+    public void setTime(int start, int end, int interval){
+        this.start = start;
+        this.end = end;
+        this.interval = interval;
+    }
+
     public String getTitle() {
         return title;
     }
@@ -60,13 +66,11 @@ public class Task {
         return interval;
     }
 
-    public void setTime(int start, int end, int interval){
-        this.start = start;
-        this.end = end;
-        this.interval = interval;
-    }
-
     public boolean isRepeated(){
         return repeat;
+    }
+
+    public int nextTimeAfter(int current){
+        return -1;
     }
 }
