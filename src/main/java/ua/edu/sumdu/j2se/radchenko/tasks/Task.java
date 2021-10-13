@@ -2,15 +2,15 @@ package ua.edu.sumdu.j2se.radchenko.tasks;
 
 public class Task {
 
-    String title;
+    public String title;
 
-    int time;
-    int start;
-    int end;
-    int interval;
+    public int time;
+    public int start;
+    public int end;
+    public int interval;
 
-    boolean active;
-    boolean repeated;
+    public boolean active;
+    public boolean repeated;
 
      //adding constuctors for repeating task and non-repeating
 
