@@ -9,7 +9,7 @@ public class Main {
         array.add(task);
         array.incoming(5, 50);
 
-		System.out.println(task.arrayOfTasks.toString());
+		System.out.println();
 	}
 
 
