@@ -1,6 +1,6 @@
 package ua.edu.sumdu.j2se.radchenko.tasks;
 
-public class Task {
+public class Task extends ArrayTaskList{
 
     private String title;
 
@@ -117,5 +117,18 @@ public class Task {
             return -1;
         }
         return current;
+    }
+
+    @Override
+    public String toString() {
+        return "Task{" +
+                "title='" + title + '\'' +
+                ", time=" + time +
+                ", start=" + start +
+                ", end=" + end +
+                ", interval=" + interval +
+                ", active=" + active +
+                ", repeated=" + repeated +
+                '}';
     }
 }
