@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class ArrayTaskList {
 
-    Task[] arrayOfTasks = new Task[0];
+    private Task[] arrayOfTasks = new Task[0];
 
     public void add(Task task){
         arrayOfTasks = Arrays.copyOf(arrayOfTasks, arrayOfTasks.length + 1);
@@ -42,19 +42,17 @@ public class ArrayTaskList {
         return arrayOfTasks[index];
     }
 
-    public ArrayTaskList[] incoming(int from, int to){
-        ArrayTaskList[] incomingTasks = new Task[0];
+    public ArrayTaskList incoming(int from, int to) {
+        ArrayTaskList arrayTaskList = new ArrayTaskList();
         for (int i = 0; i < arrayOfTasks.length; i++) {
-            if (arrayOfTasks[i].getStartTime() >= from && arrayOfTasks[i].getEndTime() <= to
-                || arrayOfTasks[i].getTime() >= from && arrayOfTasks[i].getTime() <= to) {
-                incomingTasks = Arrays.copyOf(incomingTasks, i + 1);
-                for (int j = 0; j < i; j++) {
-                    incomingTasks[j] = arrayOfTasks[i];
-                    j++;
+            if (arrayOfTasks[i].isActive()) {
+                if (arrayOfTasks[i].getStartTime() > from && arrayOfTasks[i].getEndTime() < to
+                        || arrayOfTasks[i].getTime() > from && arrayOfTasks[i].getTime() < to) {
+                    arrayTaskList.add(arrayOfTasks[i]);
                 }
             }
         }
-        return incomingTasks;
+        return arrayTaskList;
     }
 
     @Override
