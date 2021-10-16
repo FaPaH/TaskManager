@@ -1,6 +1,6 @@
 package ua.edu.sumdu.j2se.radchenko.tasks;
 
-public class Task extends ArrayTaskList{
+public class Task {
 
     private String title;
 
