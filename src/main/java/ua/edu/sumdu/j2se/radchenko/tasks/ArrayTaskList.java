@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class ArrayTaskList {
 
-    private Task[] arrayOfTasks = new Task[0];
+    private Task[] arrayOfTasks = new Task[5];
 
     public void add(Task task){
         arrayOfTasks = Arrays.copyOf(arrayOfTasks, arrayOfTasks.length + 1);
@@ -21,7 +21,7 @@ public class ArrayTaskList {
     public boolean remove(Task task){
         if (task != null) {
             for (int i = 0; i < arrayOfTasks.length; i++) {
-                if (arrayOfTasks[i] == task) {
+                if (arrayOfTasks[i].equals(task)) {
                     System.arraycopy(arrayOfTasks, i + 1, arrayOfTasks, i, arrayOfTasks.length - 1 - i);
                     arrayOfTasks = Arrays.copyOf(arrayOfTasks, arrayOfTasks.length - 1);
                     return true;
