@@ -118,4 +118,17 @@ public class Task {
         }
         return current;
     }
+
+    @Override
+    public String toString() {
+        return "Task{" +
+                "title='" + title + '\'' +
+                ", time=" + time +
+                ", start=" + start +
+                ", end=" + end +
+                ", interval=" + interval +
+                ", active=" + active +
+                ", repeated=" + repeated +
+                '}';
+    }
 }
