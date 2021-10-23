@@ -14,36 +14,52 @@ public class Task {
 
      //adding constuctors for repeating task and non-repeating
 
-    public Task(String title, int time) {
+    public Task(String title, int time) throws IllegalArgumentException{
         this.title = title;
         this.time = time;
         repeated = false;
+
+        if (time < 0){
+            throw new IllegalArgumentException("The time less than 0:" + getTime());
+        }
     }
 
-    public Task(String title, int start, int end, int interval) {
+    public Task(String title, int start, int end, int interval) throws IllegalArgumentException {
         this.title = title;
         this.start = start;
         this.end = end;
         this.interval = interval;
         repeated = true;
+
+        if (start < 0){
+            throw new IllegalArgumentException("The start time less than 0:" + getStartTime());
+        }
     }
 
     //constuctors for changing params of task
 
-    public void setTime(int start, int end, int interval) {
+    public void setTime(int start, int end, int interval)  throws IllegalArgumentException{
         if (!isRepeated()) {
             repeated = true;
         }
         this.start = start;
         this.end = end;
         this.interval = interval;
+
+        if (start < 0){
+            throw new IllegalArgumentException("The start time less than 0:" + getStartTime());
+        }
     }
 
-    public void setTime(int time) {
+    public void setTime(int time)  throws IllegalArgumentException{
         if (isRepeated()) {
             repeated = false;
         }
         this.time = time;
+
+        if (time < 0){
+            throw new IllegalArgumentException("The time less than 0:" + getTime());
+        }
     }
 
     // getters and setters
