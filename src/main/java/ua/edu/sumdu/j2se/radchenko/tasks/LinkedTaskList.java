@@ -1,22 +1,53 @@
 package ua.edu.sumdu.j2se.radchenko.tasks;
 
-import java.util.Arrays;
-
 public class LinkedTaskList {
 
-    private int size = 0;
-    private Task[] arrayOfTasks = new Task[0];
+    private Node head;
+    private Node tail;
+    private int size;
 
-    public void add(Task task){
-        size++;
-        arrayOfTasks = Arrays.copyOf(arrayOfTasks, arrayOfTasks.length + size);
-        if(task != null){
-            for (int i = 0; i < size ;i++){
-                if (arrayOfTasks[i] == null) {
-                    arrayOfTasks[i] = task;
-                    i++;
-                }
+    public LinkedTaskList() {
+        this.head = null;
+        this.tail = null;
+        this.size = 0;
+    }
+
+    class Node{
+        private Task data;
+        private Node next;
+
+        public Node(Task data, Node next) {
+            this.data = data;
+            this.next = next;
+        }
+
+        public Task getData() {
+            return data;
+        }
+
+        public void setData(Task data) {
+            this.data = data;
+        }
+
+        public Node getNext() {
+            return next;
+        }
+
+        public void setNext(Node next) {
+            this.next = next;
+        }
+    }
+
+    public void add(Task task) throws IllegalArgumentException{
+        if (task != null) {
+            if (isEmpty()) {
+                head = new Node(task, null);
+                tail = head;
+            } else {
+                tail.setNext(new Node(task, null));
+                tail = tail.getNext();
             }
+            size++;
         }
         else{
             throw new IllegalArgumentException("Task cant be null");
@@ -24,14 +55,30 @@ public class LinkedTaskList {
     }
 
     public boolean remove(Task task){
+        Node current = head;
+        Node previous = null;
+        Node beforePrevious = null;
+
         if (task != null) {
-            for (int i = 0; i < size; i++) {
-                if (arrayOfTasks[i].equals(task)) {
-                    System.arraycopy(arrayOfTasks, i + 1, arrayOfTasks, i, arrayOfTasks.length - 1 - i);
-                    size--;
-                    return true;
+            if (current.getNext() != null) {
+                previous = current;
+                current = current.getNext();
+                while (!task.equals(previous.getData())) {
+                    beforePrevious = previous;
+                    previous = current;
+                    current = current.getNext();
                 }
             }
+            if (beforePrevious == null){
+                head = current;
+            } else if (current == null){
+                tail = beforePrevious;
+            } else {
+                beforePrevious.setNext(current);
+                previous.setNext(null);
+            }
+            size--;
+            return true;
         }
         return false;
     }
@@ -40,23 +87,35 @@ public class LinkedTaskList {
         return size;
     }
 
+    public boolean isEmpty(){
+        return size() == 0;
+    }
+
     public Task getTask(int index) throws IndexOutOfBoundsException{
-        if (index > arrayOfTasks.length){
+        if (index >= size || index < 0){
             throw new IndexOutOfBoundsException("index cant be more than: " + index);
         }
-        return arrayOfTasks[index];
+        if (index < size() - 1){
+            Node current = head;
+            for(int j = 0; j < index; j++){
+                current = current.getNext();
+            }
+            return current.getData();
+        }
+        return tail.getData();
     }
 
     public LinkedTaskList incoming(int from, int to) {
         LinkedTaskList linkedTaskList = new LinkedTaskList();
-        for (int i = 0; i < size; i++) {
-            Task task = arrayOfTasks[i];
-            if (task.isActive()) {
-                if (task.nextTimeAfter(task.getStartTime()) > from
-                        && task.nextTimeAfter(task.getEndTime()) < to
-                        && task.getTime() < to) {
-                    linkedTaskList.add(arrayOfTasks[i]);
-                }
+        Node current = head;
+        Task task;
+        for (int i = 0; i < size(); i++) {
+            task = current.getData();
+            current = current.getNext();
+            if (task.nextTimeAfter(task.getStartTime()) > from
+                    && task.nextTimeAfter(task.getEndTime()) < to
+                    && task.getTime() < to){
+                    linkedTaskList.add(task);
             }
         }
         return linkedTaskList;
