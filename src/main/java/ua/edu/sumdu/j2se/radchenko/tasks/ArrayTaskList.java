@@ -8,20 +8,22 @@ public class ArrayTaskList {
     private Task[] arrayOfTasks = new Task[10];
 
     public void add(Task task) throws IllegalArgumentException{
-        size++;
-        arrayOfTasks = Arrays.copyOf(arrayOfTasks, arrayOfTasks.length + size);
-        if(task != null){
-            for (int i = 0; i < size ;i++){
-                if (arrayOfTasks[i] == null) {
-                    arrayOfTasks[i] = task;
-                    i++;
+        if (arrayOfTasks[arrayOfTasks.length-1] == null) {
+            size++;
+                if (task != null) {
+                    for (int i = 0; i < size; i++) {
+                        if (arrayOfTasks[i] == null) {
+                            arrayOfTasks[i] = task;
+                            i++;
+                        }
+                    }
+                } else {
+                    throw new IllegalArgumentException("Task cant be null");
                 }
+            } else {
+                arrayOfTasks = Arrays.copyOf(arrayOfTasks, arrayOfTasks.length + size);
             }
         }
-        else{
-            throw new IllegalArgumentException("Task cant be null");
-        }
-    }
 
     public boolean remove(Task task){
         if (task != null) {
@@ -41,7 +43,7 @@ public class ArrayTaskList {
     }
 
     public Task getTask(int index) throws IndexOutOfBoundsException{
-        if (index > size){
+        if (index > size || index < 0){
             throw new IndexOutOfBoundsException("index cant be more than: " + index);
         }
         return arrayOfTasks[index];
@@ -57,16 +59,6 @@ public class ArrayTaskList {
                         && task.getTime() < to) {
                         arrayTaskList.add(arrayOfTasks[i]);
                 }
-
-                // I think this variant what if commented is better
-
-//            if (arrayOfTasks[i].isActive()) {
-//                if (arrayOfTasks[i].getStartTime() > from && arrayOfTasks[i].getEndTime() < to
-//                        || arrayOfTasks[i].getTime() > from && arrayOfTasks[i].getTime() < to) {
-//                    arrayTaskList.add(arrayOfTasks[i]);
-//                }
-//            }
-
             }
         }
         return arrayTaskList;
