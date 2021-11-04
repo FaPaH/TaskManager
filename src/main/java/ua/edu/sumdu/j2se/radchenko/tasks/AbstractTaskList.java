@@ -18,4 +18,8 @@ public class AbstractTaskList {
         return null;
     }
 
+    public AbstractTaskList incoming(int from, int to) {
+        return null;
+    }
+
 }
