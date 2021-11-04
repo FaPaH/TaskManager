@@ -2,7 +2,7 @@ package ua.edu.sumdu.j2se.radchenko.tasks;
 
 import java.util.Arrays;
 
-public class ArrayTaskList {
+public class ArrayTaskList extends AbstractTaskList{
 
     private int size = 0;
     private Task[] arrayOfTasks = new Task[10];
