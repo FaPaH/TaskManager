@@ -12,7 +12,7 @@ public class LinkedTaskList extends AbstractTaskList{
         this.size = 0;
     }
 
-    class Node{
+    static class Node{
         private Task data;
         private Node next;
 
@@ -105,19 +105,7 @@ public class LinkedTaskList extends AbstractTaskList{
         return tail.getData();
     }
 
-    public LinkedTaskList incoming(int from, int to) {
-        LinkedTaskList linkedTaskList = new LinkedTaskList();
-        Node current = head;
-        Task task;
-        for (int i = 0; i < size(); i++) {
-            task = current.getData();
-            current = current.getNext();
-            if (task.nextTimeAfter(task.getStartTime()) > from
-                    && task.nextTimeAfter(task.getEndTime()) < to
-                    && task.getTime() < to){
-                    linkedTaskList.add(task);
-            }
-        }
-        return linkedTaskList;
+    public ListTypes.types getType() {
+        return ListTypes.types.LINKED;
     }
 }

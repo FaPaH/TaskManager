@@ -49,18 +49,7 @@ public class ArrayTaskList extends AbstractTaskList{
         return arrayOfTasks[index];
     }
 
-    public ArrayTaskList incoming(int from, int to) {
-        ArrayTaskList arrayTaskList = new ArrayTaskList();
-        for (int i = 0; i < size; i++) {
-            Task task = arrayOfTasks[i];
-            if (task.isActive()) {
-                if (task.nextTimeAfter(task.getStartTime()) > from
-                        && task.nextTimeAfter(task.getEndTime()) < to
-                        && task.getTime() < to) {
-                        arrayTaskList.add(arrayOfTasks[i]);
-                }
-            }
-        }
-        return arrayTaskList;
+    public ListTypes.types getType() {
+        return ListTypes.types.ARRAY;
     }
 }
