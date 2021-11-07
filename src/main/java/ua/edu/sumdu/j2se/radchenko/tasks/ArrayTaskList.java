@@ -2,7 +2,7 @@ package ua.edu.sumdu.j2se.radchenko.tasks;
 
 import java.util.Arrays;
 
-public class ArrayTaskList {
+public class ArrayTaskList extends AbstractTaskList{
 
     private int size = 0;
     private Task[] arrayOfTasks = new Task[10];
@@ -49,18 +49,7 @@ public class ArrayTaskList {
         return arrayOfTasks[index];
     }
 
-    public ArrayTaskList incoming(int from, int to) {
-        ArrayTaskList arrayTaskList = new ArrayTaskList();
-        for (int i = 0; i < size; i++) {
-            Task task = arrayOfTasks[i];
-            if (task.isActive()) {
-                if (task.nextTimeAfter(task.getStartTime()) > from
-                        && task.nextTimeAfter(task.getEndTime()) < to
-                        && task.getTime() < to) {
-                        arrayTaskList.add(arrayOfTasks[i]);
-                }
-            }
-        }
-        return arrayTaskList;
+    public ListTypes.types getType() {
+        return ListTypes.types.ARRAY;
     }
 }
