@@ -1,6 +1,9 @@
 package ua.edu.sumdu.j2se.radchenko.tasks;
 
-public class LinkedTaskList extends AbstractTaskList{
+import java.util.Iterator;
+import java.util.NoSuchElementException;
+
+public class LinkedTaskList extends AbstractTaskList implements Iterable<Task>, Cloneable{
 
     private Node head;
     private Node tail;
@@ -107,5 +110,58 @@ public class LinkedTaskList extends AbstractTaskList{
 
     public ListTypes.types getType() {
         return ListTypes.types.LINKED;
+    }
+
+
+    @Override
+    public Iterator<Task> iterator() {
+        Iterator<Task> iterator = new Iterator<Task>() {
+            Node current = head;
+            Node previous = null;
+            Node beforePrevious = null;
+            boolean removeCall = false;
+
+            @Override
+            public boolean hasNext() {
+                return current != null;
+            }
+
+            @Override
+            public Task next() {
+                if (current == null) {
+                    throw new NoSuchElementException();
+                }
+                Task tas = current.getData();
+                beforePrevious = previous;
+                previous = current;
+                current = current.getNext();
+                removeCall = false;
+                return tas;
+            }
+
+            @Override
+            public void remove() {
+                if (previous == null || removeCall) {
+                    throw new IllegalStateException();
+                }
+                if (beforePrevious == null) {
+                    head = current;
+                } else {
+                    beforePrevious.setNext(current);
+                }
+                size--;
+                removeCall = true;
+            }
+        };
+        return iterator;
+    }
+
+    @Override
+    public String toString() {
+        return "LinkedTaskList{" +
+                "head=" + head +
+                ", tail=" + tail +
+                ", size=" + size +
+                '}';
     }
 }

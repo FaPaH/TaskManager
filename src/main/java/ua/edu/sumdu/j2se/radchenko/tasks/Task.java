@@ -1,6 +1,8 @@
 package ua.edu.sumdu.j2se.radchenko.tasks;
 
-public class Task {
+import java.util.Objects;
+
+public class Task implements Cloneable{
 
     private String title;
 
@@ -133,6 +135,34 @@ public class Task {
             return -1;
         }
         return current;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getTitle(), isActive(), getTime(), getRepeatInterval(), isRepeated(), getStartTime(), getEndTime());
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Task)) return false;
+        Task task = (Task) o;
+        return isActive() == task.isActive() &&
+                getTime() == task.getTime() &&
+                getRepeatInterval() == task.getRepeatInterval() &&
+                isRepeated() == task.isRepeated() &&
+                getStartTime() == task.getStartTime() &&
+                getEndTime() == task.getEndTime() &&
+                Objects.equals(getTitle(), task.getTitle());
+    }
+
+    public Object clone(){
+        try {
+            Task copy = (Task) super.clone();
+            return copy;
+        } catch (CloneNotSupportedException e) {
+            return null;
+        }
     }
 
     @Override
