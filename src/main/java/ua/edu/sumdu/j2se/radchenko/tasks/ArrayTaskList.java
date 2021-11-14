@@ -1,8 +1,9 @@
 package ua.edu.sumdu.j2se.radchenko.tasks;
 
 import java.util.Arrays;
+import java.util.Iterator;
 
-public class ArrayTaskList extends AbstractTaskList{
+public class ArrayTaskList extends AbstractTaskList implements Iterable<Task>, Cloneable{
 
     private int size = 0;
     private Task[] arrayOfTasks = new Task[10];
@@ -27,7 +28,7 @@ public class ArrayTaskList extends AbstractTaskList{
 
     public boolean remove(Task task){
         if (task != null) {
-            for (int i = 0; i < size; i++) {
+            for (int i = 0; i < arrayOfTasks.length; i++) {
                 if (arrayOfTasks[i].equals(task)) {
                     System.arraycopy(arrayOfTasks, i + 1, arrayOfTasks, i, arrayOfTasks.length - 1 - i);
                     size--;
@@ -51,5 +52,45 @@ public class ArrayTaskList extends AbstractTaskList{
 
     public ListTypes.types getType() {
         return ListTypes.types.ARRAY;
+    }
+
+    @Override
+    public Iterator<Task> iterator() {
+        return new Iterator<Task>() {
+            private int current = 0;
+
+            @Override
+            public boolean hasNext() {
+                return getTask(current) != null;
+            }
+
+            @Override
+            public Task next() {
+                return getTask(current++);
+            }
+
+            @Override
+            public void remove() throws IllegalStateException {
+                ArrayTaskList taskList = new ArrayTaskList();
+                if (current == 0) {
+                    throw new IllegalStateException();
+                } else {
+                    taskList.arrayOfTasks = arrayOfTasks;
+                    Task tasksVoid = getTask(--current);
+                    taskList.remove(tasksVoid);
+                    arrayOfTasks = Arrays.copyOf(arrayOfTasks, arrayOfTasks.length - 1);
+                }
+            }
+        };
+    }
+
+
+
+    @Override
+    public String toString() {
+        return "ArrayTaskList{" +
+                "size=" + size +
+                ", arrayOfTasks=" + Arrays.toString(arrayOfTasks) +
+                '}';
     }
 }
