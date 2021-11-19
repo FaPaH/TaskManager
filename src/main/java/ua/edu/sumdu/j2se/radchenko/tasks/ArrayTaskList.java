@@ -2,6 +2,7 @@ package ua.edu.sumdu.j2se.radchenko.tasks;
 
 import java.util.Arrays;
 import java.util.Iterator;
+import java.util.stream.Stream;
 
 public class ArrayTaskList extends AbstractTaskList implements Iterable<Task>, Cloneable{
 
@@ -84,7 +85,9 @@ public class ArrayTaskList extends AbstractTaskList implements Iterable<Task>, C
         };
     }
 
-
+    public Stream<Task> getStream(){
+        return Stream.of(this.arrayOfTasks);
+    }
 
     @Override
     public String toString() {
