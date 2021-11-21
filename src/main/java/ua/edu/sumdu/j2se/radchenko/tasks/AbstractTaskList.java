@@ -1,6 +1,7 @@
 package ua.edu.sumdu.j2se.radchenko.tasks;
 
 import java.util.Iterator;
+import java.util.stream.Stream;
 
 public abstract class AbstractTaskList implements Iterable<Task>, Cloneable{
 
@@ -20,19 +21,12 @@ public abstract class AbstractTaskList implements Iterable<Task>, Cloneable{
 
     public abstract ListTypes.types getType();
 
-    public AbstractTaskList incoming(int from, int to) {
+    public final AbstractTaskList incoming(int from, int to) {
         AbstractTaskList list = TaskListFactory.createTaskList(getType());
-        Task task;
-        for (int i = 0; i < list.size(); i++) {
-            task = list.getTask(i);
-            if (task.isActive()) {
-                if (task.nextTimeAfter(task.getStartTime()) > from
-                        && task.nextTimeAfter(task.getEndTime()) < to
-                        && task.getTime() < to) {
-                    list.add(task);
-                }
-            }
-        }
+        this.getStream().filter(task -> task != null
+        && task.isActive()
+        && task.nextTimeAfter(from) != -1
+        && task.getEndTime() < to).forEach(list::add);
         return list;
     }
 
@@ -77,4 +71,6 @@ public abstract class AbstractTaskList implements Iterable<Task>, Cloneable{
         }
         return false;
     }
+
+    public abstract Stream<Task> getStream();
 }
