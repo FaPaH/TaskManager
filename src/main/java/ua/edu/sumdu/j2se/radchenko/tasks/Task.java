@@ -1,14 +1,15 @@
 package ua.edu.sumdu.j2se.radchenko.tasks;
 
+import java.time.LocalDateTime;
 import java.util.Objects;
 
 public class Task implements Cloneable{
 
     private String title;
 
-    private int time;
-    private int start;
-    private int end;
+    private LocalDateTime time;
+    private LocalDateTime start;
+    private LocalDateTime end;
     private int interval;
 
     private boolean active;
@@ -16,31 +17,31 @@ public class Task implements Cloneable{
 
      //adding constuctors for repeating task and non-repeating
 
-    public Task(String title, int time) throws IllegalArgumentException{
+    public Task(String title, LocalDateTime time) throws IllegalArgumentException{
         this.title = title;
         this.time = time;
         repeated = false;
 
-        if (time < 0){
-            throw new IllegalArgumentException("The time less than 0:" + getTime());
+        if (time == null){
+            throw new IllegalArgumentException("Time is null");
         }
     }
 
-    public Task(String title, int start, int end, int interval) throws IllegalArgumentException {
+    public Task(String title, LocalDateTime start, LocalDateTime end, int interval) throws IllegalArgumentException {
         this.title = title;
         this.start = start;
         this.end = end;
         this.interval = interval;
         repeated = true;
 
-        if (start < 0){
-            throw new IllegalArgumentException("The start time less than 0:" + getStartTime());
+        if (start == null){
+            throw new IllegalArgumentException("Time is null");
         }
     }
 
     //constuctors for changing params of task
 
-    public void setTime(int start, int end, int interval)  throws IllegalArgumentException{
+    public void setTime(LocalDateTime start, LocalDateTime end, int interval)  throws IllegalArgumentException{
         if (!isRepeated()) {
             repeated = true;
         }
@@ -48,19 +49,19 @@ public class Task implements Cloneable{
         this.end = end;
         this.interval = interval;
 
-        if (start < 0){
-            throw new IllegalArgumentException("The start time less than 0:" + getStartTime());
+        if (start == null){
+            throw new IllegalArgumentException("Time is null");
         }
     }
 
-    public void setTime(int time)  throws IllegalArgumentException{
+    public void setTime(LocalDateTime time)  throws IllegalArgumentException{
         if (isRepeated()) {
             repeated = false;
         }
         this.time = time;
 
-        if (time < 0){
-            throw new IllegalArgumentException("The time less than 0:" + getTime());
+        if (time == null){
+            throw new IllegalArgumentException("Time is null");
         }
     }
 
@@ -82,21 +83,21 @@ public class Task implements Cloneable{
         this.active = active;
     }
 
-    public int getTime() {
+    public LocalDateTime getTime() {
         if (isRepeated()) {
             return start;
         }
         return time;
     }
 
-    public int getStartTime() {
+    public LocalDateTime getStartTime() {
         if (isRepeated()) {
             return start;
         }
         return time;
     }
 
-    public int getEndTime() {
+    public LocalDateTime getEndTime() {
         if (isRepeated()) {
             return end;
         }
@@ -114,27 +115,25 @@ public class Task implements Cloneable{
         return repeated;
     }
 
-    public int nextTimeAfter(int current) {
+    public LocalDateTime nextTimeAfter(LocalDateTime nextTask) {
         if (isActive()) {
-            if (getStartTime() > current) {
+            if (!isRepeated() && nextTask.isBefore(getTime())) {
                 return getTime();
             }
-            if (getStartTime() >= getEndTime()
-                    || getRepeatInterval() < 0
-                    || current + getRepeatInterval() > getEndTime()) {
-                return -1;
-            }
-            if (getStartTime() <= current) {        //Accepts the start time of the task...
-                int time = getStartTime();          //and the current time after which you want to return...
-                while (time <= current) {           //the execution time of the next task...
-                    time += getRepeatInterval();    //with a specified interval.
+            if (isRepeated()) {
+                LocalDateTime time = getStartTime();
+                while (time.isBefore(nextTask) || time.isEqual(nextTask)) {
+                    if (getEndTime().isBefore(getStartTime())
+                            || getRepeatInterval() < 0
+                            || time.plusSeconds(getRepeatInterval()).isAfter(getEndTime())) {
+                        return null;
+                    }
+                    time = time.plusSeconds(getRepeatInterval());
                 }
                 return time;
             }
-        } else if (!isActive()) {
-            return -1;
         }
-        return current;
+        return null;
     }
 
     @Override
