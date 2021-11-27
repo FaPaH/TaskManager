@@ -22,15 +22,6 @@ public abstract class AbstractTaskList implements Iterable<Task>, Cloneable{
 
     public abstract ListTypes.types getType();
 
-    public final AbstractTaskList incoming(LocalDateTime from, LocalDateTime to) {
-        AbstractTaskList list = TaskListFactory.createTaskList(getType());
-        this.getStream().filter(task -> task != null
-        && task.isActive()
-        && task.nextTimeAfter(from) == null
-        && task.getEndTime().isBefore(to)).forEach(list::add);
-        return list;
-    }
-
     @Override
     public int hashCode() {
         int hashCode = 1;
