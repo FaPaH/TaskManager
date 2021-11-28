@@ -10,9 +10,8 @@ public class Tasks {
         return new Iterable<Task>() {
             @Override
             public Iterator<Task> iterator() {
-                return StreamSupport.stream(tasks.spliterator(), false).filter(task -> task != null
-                                && task.isActive()
-                                && task.nextTimeAfter(start) != null
+                return StreamSupport.stream(tasks.spliterator(), false).filter(task ->
+                        task.nextTimeAfter(start) != null
                         && (end.isAfter(task.nextTimeAfter(start))
                         || end.isEqual(task.nextTimeAfter(start)))).iterator();
             }
