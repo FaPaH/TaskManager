@@ -16,6 +16,5 @@ public class Main {
 		View mainView = new ViewImpl();
 		Controller mainController = new ControllerImpl(taskList, mainView);
 		mainController.process(null);
-
 	}
 }

@@ -2,26 +2,25 @@ package ua.edu.sumdu.j2se.radchenko.tasks.view;
 
 import ua.edu.sumdu.j2se.radchenko.tasks.controller.Controller;
 import ua.edu.sumdu.j2se.radchenko.tasks.model.AbstractTaskList;
+import ua.edu.sumdu.j2se.radchenko.tasks.model.Task;
+import ua.edu.sumdu.j2se.radchenko.tasks.model.Tasks;
 
 import java.io.IOException;
-import java.time.DateTimeException;
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
+import java.util.Map;
+import java.util.Set;
+import java.util.SortedMap;
 
-public class AddTaskView implements View, Action{
+public class CalendarView implements View, Action{
 
-    @Override
-    public int printInfo(AbstractTaskList taskList) {
-        System.out.println("Task is added to list");
-        return Controller.ADD_TASK;
-    }
 
     @Override
     public int chosenAction() {
-        System.out.println("Chose task what you want to add");
-        System.out.println("1 - non repeat, 2 - repeat, 3 - go back to main menu");
+        System.out.println("Choose option");
+        System.out.println("1 - Check tasks from - to, 2 - go back to main menu");
         int chosenAction = 0;
         try {
             chosenAction = Integer.parseInt(reader.readLine());
@@ -31,20 +30,28 @@ public class AddTaskView implements View, Action{
         return chosenAction;
     }
 
-    public String taskName(){
-        System.out.println("Type task name: ");
-        String name = "null";
-        try {
-            name = reader.readLine();
-        }catch (IOException e){
-            e.printStackTrace();
-        }
-        return name;
-    }
+    @Override
+    public int printInfo(AbstractTaskList taskList) {
+        LocalDateTime startTime = startTime();
+        LocalDateTime endTime = endTime();
 
-    public LocalDateTime timeTask(){
-        System.out.print("Enter the due date for the task (example yyyy-MM-dd HH:mm = 2021-12-13 12:30): ");
-        return stringToTime();
+        if (endTime.isBefore(LocalDateTime.now())){
+            System.out.println("Unexpected end time");
+            return Controller.CALENDAR;
+        }
+
+        SortedMap<LocalDateTime, Set<Task>> calendar = Tasks.calendar(taskList, startTime, endTime);
+        if (calendar.size() != 0) {
+            for (Map.Entry<LocalDateTime, Set<Task>> element : calendar.entrySet()) {
+                for (Task task : element.getValue()) {
+                    System.out.println("Title: " + task.getTitle() + " - ");
+                }
+                System.out.println("Time: " + element.getKey() + "\n");
+            }
+        } else {
+            System.out.println("On this time you didnt have tasks");
+        }
+        return Controller.MAIN_MENU;
     }
 
     public LocalDateTime startTime(){
@@ -57,16 +64,6 @@ public class AddTaskView implements View, Action{
         return stringToTime();
     }
 
-    public int repeatInterval(){
-        System.out.println("Enter repeat interval of task in minutes");
-        int intervalHolder = 0;
-        try {
-            intervalHolder = Integer.parseInt(reader.readLine());
-        }catch (IOException | NumberFormatException e){
-            intervalHolder = Integer.MAX_VALUE;
-        }
-        return intervalHolder;
-    }
 
     private LocalDateTime stringToTime(){
         String date = "null";

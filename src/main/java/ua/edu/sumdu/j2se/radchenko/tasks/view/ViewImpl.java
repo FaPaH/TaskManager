@@ -10,12 +10,13 @@ public class ViewImpl implements View{
     public int printInfo(AbstractTaskList taskList) {
 
         System.out.println("Choose one option");
-        System.out.println("\n1 - Add task");
-//        System.out.println("2 - Change parameters of task\n");
-//        System.out.println("3 - Delete task\n");
-//        System.out.println("4 - Check all tasks\n");
-//        System.out.println("5 - Check from `time` to `time` tasks\n");
-        System.out.println("\n6 - Exit");
+        System.out.println("1 - Add task");
+        System.out.println("2 - Change parameters of task");
+        System.out.println("3 - Delete task");
+        System.out.println("4 - Check all tasks");
+        System.out.println("5 - Check from `time` to `time` tasks");
+        System.out.println("6 - Save/Load");
+        System.out.println("7 - Exit");
 
         int chosenParam = 0;
 

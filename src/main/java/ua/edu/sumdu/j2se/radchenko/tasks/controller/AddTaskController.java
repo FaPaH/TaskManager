@@ -1,5 +1,6 @@
 package ua.edu.sumdu.j2se.radchenko.tasks.controller;
 
+import org.apache.log4j.Logger;
 import ua.edu.sumdu.j2se.radchenko.tasks.model.AbstractTaskList;
 import ua.edu.sumdu.j2se.radchenko.tasks.model.Task;
 import ua.edu.sumdu.j2se.radchenko.tasks.view.AddTaskView;
@@ -17,20 +18,21 @@ public class AddTaskController extends Controller{
     @Override
     public int process(AbstractTaskList taskList) throws IOException {
         Task task;
-        int taskAddChoose = ((AddTaskView) view).chosenAction();
+        int taskChoose = ((AddTaskView) view).chosenAction();
 
-        if (taskAddChoose == 1){
+        if (taskChoose == 1){
             addNonRepeatTask(taskList);
         }
-        else if (taskAddChoose == 2){
+        else if (taskChoose == 2){
             addRepeatTask(taskList);
         }
-        else if (taskAddChoose == 3){
+        else if (taskChoose == 3){
             return Controller.MAIN_MENU;
         } else {
-            System.out.println("Wrong number");
+            getLogger().error(Errors.WRONG_NUMBER);
             return Controller.ADD_TASK;
         }
+
         return view.printInfo(taskList);
     }
 
@@ -42,15 +44,15 @@ public class AddTaskController extends Controller{
         int interval = ((AddTaskView) view).repeatInterval();
 
         if (end.isBefore(start)){
-            System.out.println("Unexpected end time");
+            getLogger().error(Errors.UNEXPECTED_END_TIME);
             return ADD_TASK;
         }
         if (end.isBefore(LocalDateTime.now())){
-            System.out.println("Unexpected end time");
+            getLogger().error(Errors.UNEXPECTED_END_TIME);
             return ADD_TASK;
         }
         if (interval == Integer.MAX_VALUE || interval < 0){
-            System.out.println("Unexpected interval");
+            getLogger().error(Errors.UNEXPECTED_INTERVAL);
             return ADD_TASK;
         }
         task = new Task(name, start, end, interval);
@@ -65,7 +67,7 @@ public class AddTaskController extends Controller{
         LocalDateTime time = ((AddTaskView) view).timeTask();
 
         if (time.isBefore(LocalDateTime.now())){
-            System.out.println("Unexpected time");
+            getLogger().error(Errors.UNEXPECTED_TIME);
             return ADD_TASK;
         }
 
