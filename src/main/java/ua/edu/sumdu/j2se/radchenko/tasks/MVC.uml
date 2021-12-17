@@ -3,531 +3,1164 @@
   <ID>JAVA</ID>
   <OriginalElement>ua.edu.sumdu.j2se.radchenko.tasks</OriginalElement>
   <nodes>
-    <node x="1014.553048455804" y="1510.0">ua.edu.sumdu.j2se.radchenko.tasks.model.TaskIO</node>
-    <node x="155.04166666666663" y="2472.0">ua.edu.sumdu.j2se.radchenko.tasks.controller.ControllerImpl</node>
-    <node x="277.5105165069214" y="1816.0">ua.edu.sumdu.j2se.radchenko.tasks.controller.Controller</node>
-    <node x="583.428048455804" y="1990.0">ua.edu.sumdu.j2se.radchenko.tasks.view.AddTaskView</node>
-    <node x="402.45833333333337" y="2612.0">ua.edu.sumdu.j2se.radchenko.tasks.Main</node>
-    <node x="788.553048455804" y="1827.0">ua.edu.sumdu.j2se.radchenko.tasks.view.ViewImpl</node>
-    <node x="1123.1572151224705" y="759.0">ua.edu.sumdu.j2se.radchenko.tasks.model.ArrayTaskList</node>
-    <node x="356.82927316293916" y="1200.0">ua.edu.sumdu.j2se.radchenko.tasks.model.AbstractTaskList</node>
-    <node x="127.50000000000006" y="1068.0">ua.edu.sumdu.j2se.radchenko.tasks.model.TaskListFactory</node>
-    <node x="978.5" y="518.0">ua.edu.sumdu.j2se.radchenko.tasks.model.LinkedTaskList.Node</node>
-    <node x="394.50000000000006" y="541.0">ua.edu.sumdu.j2se.radchenko.tasks.model.Tasks</node>
-    <node x="803.360623003194" y="0.0">ua.edu.sumdu.j2se.radchenko.tasks.model.Task</node>
-    <node x="750.8284078807234" y="748.0">ua.edu.sumdu.j2se.radchenko.tasks.model.LinkedTaskList</node>
-    <node x="580.875" y="2286.0">ua.edu.sumdu.j2se.radchenko.tasks.controller.AddTaskController</node>
-    <node x="529.0105165069215" y="1839.0">ua.edu.sumdu.j2se.radchenko.tasks.view.Action</node>
-    <node x="471.0938498402548" y="1599.0">ua.edu.sumdu.j2se.radchenko.tasks.view.View</node>
-    <node x="36.5" y="541.0">ua.edu.sumdu.j2se.radchenko.tasks.model.ListTypes.types</node>
-    <node x="0.0" y="201.0">ua.edu.sumdu.j2se.radchenko.tasks.model.ListTypes</node>
+    <node x="1942.5" y="1630.0">ua.edu.sumdu.j2se.radchenko.tasks.model.TaskIO</node>
+    <node x="123.5" y="2502.0">ua.edu.sumdu.j2se.radchenko.tasks.view.CheckAllTaskView</node>
+    <node x="2047.3146895929933" y="1965.0">ua.edu.sumdu.j2se.radchenko.tasks.controller.Controller</node>
+    <node x="3473.5625" y="3202.0">ua.edu.sumdu.j2se.radchenko.tasks.controller.ControllerImpl</node>
+    <node x="1077.3146895929933" y="3006.0">ua.edu.sumdu.j2se.radchenko.tasks.controller.CalendarController</node>
+    <node x="10.5" y="1999.0">ua.edu.sumdu.j2se.radchenko.tasks.view.ViewImpl</node>
+    <node x="2866.943843379701" y="1232.0">ua.edu.sumdu.j2se.radchenko.tasks.model.AbstractTaskList</node>
+    <node x="2001.1313433797009" y="1309.5">ua.edu.sumdu.j2se.radchenko.tasks.model.Tasks</node>
+    <node x="1076.5" y="2480.0">ua.edu.sumdu.j2se.radchenko.tasks.view.SaveLoadView</node>
+    <node x="1346.1896895929933" y="2995.0">ua.edu.sumdu.j2se.radchenko.tasks.controller.DeleteTaskController</node>
+    <node x="596.9824188562595" y="2951.0">ua.edu.sumdu.j2se.radchenko.tasks.controller.ChangeTaskController</node>
+    <node x="3040.4230100463674" y="0.0">ua.edu.sumdu.j2se.radchenko.tasks.model.Task</node>
+    <node x="3295.270833333333" y="2984.0">ua.edu.sumdu.j2se.radchenko.tasks.controller.AddTaskController</node>
+    <node x="2807.631343379701" y="199.5">ua.edu.sumdu.j2se.radchenko.tasks.model.ListTypes</node>
+    <node x="837.875" y="2480.0">ua.edu.sumdu.j2se.radchenko.tasks.view.DeleteTaskView</node>
+    <node x="602.5" y="2458.0">ua.edu.sumdu.j2se.radchenko.tasks.view.CalendarView</node>
+    <node x="1595.5" y="2513.5">ua.edu.sumdu.j2se.radchenko.tasks.controller.Errors</node>
+    <node x="1810.0063433797009" y="3331.0">ua.edu.sumdu.j2se.radchenko.tasks.Main</node>
+    <node x="1367.5" y="2425.0">ua.edu.sumdu.j2se.radchenko.tasks.view.AddTaskView</node>
+    <node x="2326.9824188562598" y="2502.0">ua.edu.sumdu.j2se.radchenko.tasks.controller.CheckAllTaskController</node>
+    <node x="3171.439689592993" y="784.0">ua.edu.sumdu.j2se.radchenko.tasks.model.ArrayTaskList</node>
+    <node x="2709.439689592993" y="1101.0">ua.edu.sumdu.j2se.radchenko.tasks.model.TaskListFactory</node>
+    <node x="3013.189689592993" y="555.0">ua.edu.sumdu.j2se.radchenko.tasks.model.LinkedTaskList.Node</node>
+    <node x="2238.5" y="1707.0">ua.edu.sumdu.j2se.radchenko.tasks.controller.NotificatorController</node>
+    <node x="1669.6896895929933" y="2984.0">ua.edu.sumdu.j2se.radchenko.tasks.controller.SaveLoadController</node>
+    <node x="2976.439689592993" y="773.0">ua.edu.sumdu.j2se.radchenko.tasks.model.LinkedTaskList</node>
+    <node x="3367.439689592993" y="1320.5">ua.edu.sumdu.j2se.radchenko.tasks.view.NotificatorView</node>
+    <node x="866.875" y="2010.5">ua.edu.sumdu.j2se.radchenko.tasks.view.Action</node>
+    <node x="1717.5" y="1718.5">ua.edu.sumdu.j2se.radchenko.tasks.view.View</node>
+    <node x="2781.439689592993" y="577.5">ua.edu.sumdu.j2se.radchenko.tasks.model.ListTypes.types</node>
+    <node x="348.5" y="2304.0">ua.edu.sumdu.j2se.radchenko.tasks.view.ChangeTaskView</node>
   </nodes>
   <notes />
   <edges>
-    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.view.ViewImpl" target="ua.edu.sumdu.j2se.radchenko.tasks.model.AbstractTaskList" relationship="DEPENDENCY">
-      <point x="51.25" y="-39.0" />
-      <point x="942.303048455804" y="1488.0" />
-      <point x="685.548123003194" y="1488.0" />
-      <point x="685.548123003194" y="1478.0" />
-      <point x="485.82927316293916" y="1478.0" />
-      <point x="43.0" y="128.0" />
-    </edge>
     <edge source="ua.edu.sumdu.j2se.radchenko.tasks.model.Tasks" target="ua.edu.sumdu.j2se.radchenko.tasks.model.Task" relationship="DEPENDENCY">
-      <point x="0.0" y="-50.0" />
-      <point x="676.5" y="497.0" />
-      <point x="562.9697151224706" y="497.0" />
-      <point x="562.9697151224706" y="487.0" />
-      <point x="854.360623003194" y="487.0" />
-      <point x="-102.0" y="228.0" />
+      <point x="0.0" y="-49.5" />
+      <point x="2283.131343379701" y="514.0" />
+      <point x="1515.1313433797009" y="514.0" />
+      <point x="1515.1313433797009" y="484.0" />
+      <point x="3091.4230100463674" y="484.0" />
+      <point x="-102.0" y="226.5" />
     </edge>
-    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.model.TaskListFactory" target="ua.edu.sumdu.j2se.radchenko.tasks.model.ArrayTaskList" relationship="CREATE">
-      <point x="61.5" y="-39.0" />
-      <point x="312.00000000000006" y="1046.0" />
-      <point x="864.6417731629392" y="1046.0" />
-      <point x="864.6417731629392" y="1036.0" />
-      <point x="1300.053048455804" y="1036.0" />
-      <point x="1300.053048455804" y="1026.0" />
-      <point x="1254.4072151224705" y="1026.0" />
-      <point x="43.75" y="117.0" />
-    </edge>
-    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.model.ArrayTaskList" target="ua.edu.sumdu.j2se.radchenko.tasks.model.ListTypes.types" relationship="DEPENDENCY">
-      <point x="-58.33333333333326" y="-117.0" />
-      <point x="1152.3238817891374" y="716.0" />
-      <point x="26.0" y="716.0" />
-      <point x="26.0" y="696.0" />
-      <point x="117.00000000000006" y="696.0" />
-      <point x="0.0" y="50.0" />
-    </edge>
-    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.model.AbstractTaskList" target="ua.edu.sumdu.j2se.radchenko.tasks.model.Task" relationship="DEPENDENCY">
-      <point x="-43.0" y="-128.0" />
-      <point x="399.82927316293916" y="1178.0" />
-      <point x="88.71971512247057" y="1178.0" />
-      <point x="88.71971512247057" y="1168.0" />
-      <point x="384.00000000000006" y="1168.0" />
-      <point x="384.00000000000006" y="497.0" />
-      <point x="562.9697151224706" y="497.0" />
-      <point x="562.9697151224706" y="487.0" />
-      <point x="854.360623003194" y="487.0" />
-      <point x="-102.0" y="228.0" />
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.view.CheckAllTaskView" target="ua.edu.sumdu.j2se.radchenko.tasks.model.Task" relationship="DEPENDENCY">
+      <point x="-51.25" y="-38.5" />
+      <point x="174.75" y="2282.0" />
+      <point x="383.25634337970087" y="2282.0" />
+      <point x="383.25634337970087" y="514.0" />
+      <point x="1515.1313433797009" y="514.0" />
+      <point x="1515.1313433797009" y="484.0" />
+      <point x="3091.4230100463674" y="484.0" />
+      <point x="-102.0" y="226.5" />
     </edge>
     <edge source="ua.edu.sumdu.j2se.radchenko.tasks.model.LinkedTaskList" target="ua.edu.sumdu.j2se.radchenko.tasks.model.LinkedTaskList.Node" relationship="CREATE">
-      <point x="65.625" y="-128.0" />
-      <point x="903.9534078807234" y="726.0" />
-      <point x="1062.0" y="726.0" />
-      <point x="1062.0" y="706.0" />
-      <point x="1101.0" y="706.0" />
-      <point x="49.0" y="73.0" />
-    </edge>
-    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.model.TaskListFactory" target="ua.edu.sumdu.j2se.radchenko.tasks.model.ListTypes" relationship="DEPENDENCY">
-      <point x="-61.5" y="-39.0" />
-      <point x="189.00000000000006" y="1046.0" />
-      <point x="38.219715122470575" y="1046.0" />
-      <point x="38.219715122470575" y="1036.0" />
-      <point x="5.5" y="1036.0" />
-      <point x="5.5" y="497.0" />
-      <point x="10.5" y="497.0" />
-      <point x="10.5" y="487.0" />
-      <point x="28.0" y="487.0" />
-      <point x="-28.0" y="27.0" />
+      <point x="21.875" y="-127.0" />
+      <point x="3085.814689592993" y="751.0" />
+      <point x="3067.189689592993" y="751.0" />
+      <point x="3067.189689592993" y="741.0" />
+      <point x="3086.689689592993" y="741.0" />
+      <point x="0.0" y="72.0" />
     </edge>
     <edge source="ua.edu.sumdu.j2se.radchenko.tasks.Main" target="ua.edu.sumdu.j2se.radchenko.tasks.model.ArrayTaskList" relationship="CREATE">
-      <point x="37.25000000000006" y="-39.0" />
-      <point x="514.2083333333335" y="2591.0" />
-      <point x="860.7083333333335" y="2591.0" />
-      <point x="860.7083333333335" y="2571.0" />
-      <point x="1300.053048455804" y="2571.0" />
-      <point x="1300.053048455804" y="1026.0" />
-      <point x="1254.4072151224705" y="1026.0" />
-      <point x="43.75" y="117.0" />
+      <point x="37.25" y="-38.5" />
+      <point x="1921.7563433797009" y="3310.0" />
+      <point x="3668.5625" y="3310.0" />
+      <point x="3668.5625" y="3300.0" />
+      <point x="3751.502189592993" y="3300.0" />
+      <point x="3751.502189592993" y="1059.0" />
+      <point x="3225.189689592993" y="1059.0" />
+      <point x="3225.189689592993" y="1049.0" />
+      <point x="3302.689689592993" y="1049.0" />
+      <point x="43.75" y="116.0" />
     </edge>
     <edge source="ua.edu.sumdu.j2se.radchenko.tasks.model.LinkedTaskList" target="ua.edu.sumdu.j2se.radchenko.tasks.model.Task" relationship="CREATE">
-      <point x="65.625" y="-128.0" />
-      <point x="903.9534078807234" y="726.0" />
-      <point x="1062.0" y="726.0" />
-      <point x="1062.0" y="706.0" />
-      <point x="1221.6572151224705" y="706.0" />
-      <point x="1221.6572151224705" y="497.0" />
-      <point x="1254.7188498402547" y="497.0" />
-      <point x="1254.7188498402547" y="477.0" />
-      <point x="1058.360623003194" y="477.0" />
-      <point x="102.0" y="228.0" />
+      <point x="21.875" y="-127.0" />
+      <point x="3085.814689592993" y="751.0" />
+      <point x="3067.189689592993" y="751.0" />
+      <point x="3067.189689592993" y="741.0" />
+      <point x="3170.689689592993" y="741.0" />
+      <point x="3170.689689592993" y="504.0" />
+      <point x="3193.4230100463674" y="504.0" />
+      <point x="0.0" y="226.5" />
     </edge>
     <edge source="ua.edu.sumdu.j2se.radchenko.tasks.model.TaskIO" target="ua.edu.sumdu.j2se.radchenko.tasks.model.AbstractTaskList" relationship="DEPENDENCY">
-      <point x="-68.75" y="-116.0" />
-      <point x="1083.303048455804" y="1488.0" />
-      <point x="685.548123003194" y="1488.0" />
-      <point x="685.548123003194" y="1478.0" />
-      <point x="485.82927316293916" y="1478.0" />
-      <point x="43.0" y="128.0" />
-    </edge>
-    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.model.TaskIO" target="ua.edu.sumdu.j2se.radchenko.tasks.model.Task" relationship="CREATE">
-      <point x="68.75" y="-116.0" />
-      <point x="1220.803048455804" y="1488.0" />
-      <point x="1335.053048455804" y="1488.0" />
-      <point x="1335.053048455804" y="497.0" />
-      <point x="1254.7188498402547" y="497.0" />
-      <point x="1254.7188498402547" y="477.0" />
-      <point x="1058.360623003194" y="477.0" />
-      <point x="102.0" y="228.0" />
-    </edge>
-    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.ControllerImpl" target="ua.edu.sumdu.j2se.radchenko.tasks.controller.Controller" relationship="TO_MANY">
-      <point x="-94.875" y="-39.0" />
-      <point x="186.66666666666663" y="2450.0" />
-      <point x="214.0625" y="2450.0" />
-      <point x="214.0625" y="2430.0" />
-      <point x="263.93343982960585" y="2430.0" />
-      <point x="263.93343982960585" y="1968.0" />
-      <point x="310.6771831735881" y="1968.0" />
-      <point x="-66.33333333333331" y="50.0" />
+      <point x="-68.75" y="-115.5" />
+      <point x="2011.25" y="1588.0" />
+      <point x="1338.6313433797009" y="1588.0" />
+      <point x="1338.6313433797009" y="1518.0" />
+      <point x="2909.943843379701" y="1518.0" />
+      <point x="-43.0" y="127.0" />
     </edge>
     <edge source="ua.edu.sumdu.j2se.radchenko.tasks.view.View" target="ua.edu.sumdu.j2se.radchenko.tasks.model.AbstractTaskList" relationship="DEPENDENCY">
       <point x="0.0" y="-27.0" />
-      <point x="573.5938498402547" y="1488.0" />
-      <point x="685.548123003194" y="1488.0" />
-      <point x="685.548123003194" y="1478.0" />
-      <point x="485.82927316293916" y="1478.0" />
-      <point x="43.0" y="128.0" />
+      <point x="1820.0" y="1588.0" />
+      <point x="1338.6313433797009" y="1588.0" />
+      <point x="1338.6313433797009" y="1518.0" />
+      <point x="2909.943843379701" y="1518.0" />
+      <point x="-43.0" y="127.0" />
     </edge>
-    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.Main" target="ua.edu.sumdu.j2se.radchenko.tasks.controller.Controller" relationship="DEPENDENCY">
-      <point x="-37.24999999999994" y="-39.0" />
-      <point x="439.70833333333337" y="2591.0" />
-      <point x="144.54166666666663" y="2591.0" />
-      <point x="144.54166666666663" y="2581.0" />
-      <point x="418.54166666666663" y="2581.0" />
-      <point x="418.54166666666663" y="1938.0" />
-      <point x="377.0105165069214" y="1938.0" />
-      <point x="0.0" y="50.0" />
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.NotificatorController" target="ua.edu.sumdu.j2se.radchenko.tasks.model.AbstractTaskList" relationship="TO_ONE">
+      <point x="85.75" y="-38.5" />
+      <point x="2495.75" y="1598.0" />
+      <point x="3500.818843379701" y="1598.0" />
+      <point x="3500.818843379701" y="1578.0" />
+      <point x="3505.818843379701" y="1578.0" />
+      <point x="3505.818843379701" y="1518.0" />
+      <point x="2995.943843379701" y="1518.0" />
+      <point x="43.0" y="127.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.SaveLoadController" target="ua.edu.sumdu.j2se.radchenko.tasks.view.SaveLoadView" relationship="DEPENDENCY">
+      <point x="-52.0" y="-60.5" />
+      <point x="1721.6896895929933" y="2809.0" />
+      <point x="1230.25" y="2809.0" />
+      <point x="51.25" y="60.5" />
     </edge>
     <edge source="ua.edu.sumdu.j2se.radchenko.tasks.view.AddTaskView" target="ua.edu.sumdu.j2se.radchenko.tasks.model.AbstractTaskList" relationship="DEPENDENCY">
-      <point x="-51.75" y="-116.0" />
-      <point x="635.875" y="1958.0" />
-      <point x="714.3438498402547" y="1958.0" />
-      <point x="714.3438498402547" y="1488.0" />
-      <point x="685.548123003194" y="1488.0" />
-      <point x="685.548123003194" y="1478.0" />
-      <point x="485.82927316293916" y="1478.0" />
-      <point x="43.0" y="128.0" />
+      <point x="-51.75" y="-115.5" />
+      <point x="1419.25" y="2282.0" />
+      <point x="1324.5" y="2282.0" />
+      <point x="1324.5" y="1588.0" />
+      <point x="1338.6313433797009" y="1588.0" />
+      <point x="1338.6313433797009" y="1518.0" />
+      <point x="2909.943843379701" y="1518.0" />
+      <point x="-43.0" y="127.0" />
     </edge>
     <edge source="ua.edu.sumdu.j2se.radchenko.tasks.Main" target="ua.edu.sumdu.j2se.radchenko.tasks.view.ViewImpl" relationship="CREATE">
-      <point x="37.25000000000006" y="-39.0" />
-      <point x="514.2083333333335" y="2591.0" />
-      <point x="860.7083333333335" y="2591.0" />
-      <point x="860.7083333333335" y="2571.0" />
-      <point x="891.053048455804" y="2571.0" />
-      <point x="0.0" y="39.0" />
+      <point x="37.25" y="-38.5" />
+      <point x="1921.7563433797009" y="3310.0" />
+      <point x="3668.5625" y="3310.0" />
+      <point x="3668.5625" y="3300.0" />
+      <point x="113.0" y="3300.0" />
+      <point x="0.0" y="38.5" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.ControllerImpl" target="ua.edu.sumdu.j2se.radchenko.tasks.controller.DeleteTaskController" relationship="CREATE">
+      <point x="-94.875" y="-38.5" />
+      <point x="3505.1875" y="3180.0" />
+      <point x="839.7324188562595" y="3180.0" />
+      <point x="839.7324188562595" y="3160.0" />
+      <point x="1453.1896895929933" y="3160.0" />
+      <point x="0.0" y="49.5" />
     </edge>
     <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.Controller" target="ua.edu.sumdu.j2se.radchenko.tasks.view.View" relationship="TO_ONE">
-      <point x="49.75" y="-50.0" />
-      <point x="426.7605165069214" y="1774.0" />
-      <point x="573.5938498402547" y="1774.0" />
-      <point x="0.0" y="27.0" />
+      <point x="49.75" y="-72.5" />
+      <point x="2196.564689592993" y="1933.0" />
+      <point x="2330.190752189593" y="1933.0" />
+      <point x="2330.190752189593" y="1893.0" />
+      <point x="1888.3333333333333" y="1893.0" />
+      <point x="68.33333333333326" y="27.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.view.CheckAllTaskView" target="ua.edu.sumdu.j2se.radchenko.tasks.view.View" relationship="REALIZATION">
+      <point x="51.25" y="-38.5" />
+      <point x="277.25" y="2202.0" />
+      <point x="394.25634337970087" y="2202.0" />
+      <point x="394.25634337970087" y="1943.0" />
+      <point x="716.5" y="1943.0" />
+      <point x="716.5" y="1913.0" />
+      <point x="1751.6666666666667" y="1913.0" />
+      <point x="-68.33333333333326" y="27.0" />
     </edge>
     <edge source="ua.edu.sumdu.j2se.radchenko.tasks.model.AbstractTaskList" target="ua.edu.sumdu.j2se.radchenko.tasks.model.ListTypes.types" relationship="DEPENDENCY">
-      <point x="-43.0" y="-128.0" />
-      <point x="399.82927316293916" y="1178.0" />
-      <point x="88.71971512247057" y="1178.0" />
-      <point x="88.71971512247057" y="1168.0" />
-      <point x="117.00000000000006" y="1168.0" />
-      <point x="0.0" y="50.0" />
+      <point x="-43.0" y="-127.0" />
+      <point x="2909.943843379701" y="1210.0" />
+      <point x="2776.881343379701" y="1210.0" />
+      <point x="2776.881343379701" y="1200.0" />
+      <point x="2698.939689592993" y="1200.0" />
+      <point x="2698.939689592993" y="751.0" />
+      <point x="2861.939689592993" y="751.0" />
+      <point x="0.0" y="49.5" />
     </edge>
-    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.model.LinkedTaskList" target="ua.edu.sumdu.j2se.radchenko.tasks.model.AbstractTaskList" relationship="GENERALIZATION">
-      <point x="43.75" y="128.0" />
-      <point x="882.0784078807234" y="1026.0" />
-      <point x="875.1417731629392" y="1026.0" />
-      <point x="875.1417731629392" y="1168.0" />
-      <point x="880.1417731629392" y="1168.0" />
-      <point x="880.1417731629392" y="1178.0" />
-      <point x="485.82927316293916" y="1178.0" />
-      <point x="43.0" y="-128.0" />
-    </edge>
-    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.ControllerImpl" target="ua.edu.sumdu.j2se.radchenko.tasks.view.AddTaskView" relationship="CREATE">
-      <point x="94.875" y="-39.0" />
-      <point x="376.41666666666663" y="2450.0" />
-      <point x="640.875" y="2450.0" />
-      <point x="640.875" y="2440.0" />
-      <point x="570.375" y="2440.0" />
-      <point x="570.375" y="2264.0" />
-      <point x="635.178048455804" y="2264.0" />
-      <point x="-51.75" y="116.0" />
-    </edge>
-    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.ControllerImpl" target="ua.edu.sumdu.j2se.radchenko.tasks.controller.AddTaskController" relationship="CREATE">
-      <point x="94.875" y="-39.0" />
-      <point x="376.41666666666663" y="2450.0" />
-      <point x="640.875" y="2450.0" />
-      <point x="640.875" y="2440.0" />
-      <point x="711.375" y="2440.0" />
-      <point x="0.0" y="61.0" />
-    </edge>
-    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.model.ArrayTaskList" target="ua.edu.sumdu.j2se.radchenko.tasks.model.Task" relationship="TO_ONE">
-      <point x="0.0" y="-117.0" />
-      <point x="1210.6572151224705" y="696.0" />
-      <point x="1177.9375" y="696.0" />
-      <point x="1177.9375" y="497.0" />
-      <point x="1057.9697151224705" y="497.0" />
-      <point x="1057.9697151224705" y="487.0" />
-      <point x="956.360623003194" y="487.0" />
-      <point x="0.0" y="228.0" />
-    </edge>
-    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.AddTaskController" target="ua.edu.sumdu.j2se.radchenko.tasks.view.AddTaskView" relationship="DEPENDENCY">
-      <point x="0.0" y="-61.0" />
-      <point x="711.375" y="2244.0" />
-      <point x="738.678048455804" y="2244.0" />
-      <point x="51.75" y="116.0" />
-    </edge>
-    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.Main" target="ua.edu.sumdu.j2se.radchenko.tasks.model.AbstractTaskList" relationship="DEPENDENCY">
-      <point x="-37.24999999999994" y="-39.0" />
-      <point x="439.70833333333337" y="2591.0" />
-      <point x="144.54166666666663" y="2591.0" />
-      <point x="144.54166666666663" y="2581.0" />
-      <point x="106.45833333333331" y="2581.0" />
-      <point x="106.45833333333331" y="1488.0" />
-      <point x="685.548123003194" y="1488.0" />
-      <point x="685.548123003194" y="1478.0" />
-      <point x="485.82927316293916" y="1478.0" />
-      <point x="43.0" y="128.0" />
-    </edge>
-    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.model.LinkedTaskList.Node" target="ua.edu.sumdu.j2se.radchenko.tasks.model.Task" relationship="DEPENDENCY">
-      <point x="-36.750000000000114" y="-73.0" />
-      <point x="1015.25" y="497.0" />
-      <point x="562.9697151224706" y="497.0" />
-      <point x="562.9697151224706" y="487.0" />
-      <point x="854.360623003194" y="487.0" />
-      <point x="-102.0" y="228.0" />
-    </edge>
-    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.AddTaskController" target="ua.edu.sumdu.j2se.radchenko.tasks.model.AbstractTaskList" relationship="DEPENDENCY">
-      <point x="0.0" y="-61.0" />
-      <point x="711.375" y="2244.0" />
-      <point x="1004.053048455804" y="2244.0" />
-      <point x="1004.053048455804" y="1488.0" />
-      <point x="685.548123003194" y="1488.0" />
-      <point x="685.548123003194" y="1478.0" />
-      <point x="485.82927316293916" y="1478.0" />
-      <point x="43.0" y="128.0" />
-    </edge>
-    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.model.ArrayTaskList" target="ua.edu.sumdu.j2se.radchenko.tasks.model.Task" relationship="CREATE">
-      <point x="58.33333333333326" y="-117.0" />
-      <point x="1268.990548455804" y="726.0" />
-      <point x="1244.2188498402547" y="726.0" />
-      <point x="1244.2188498402547" y="497.0" />
-      <point x="1254.7188498402547" y="497.0" />
-      <point x="1254.7188498402547" y="477.0" />
-      <point x="1058.360623003194" y="477.0" />
-      <point x="102.0" y="228.0" />
-    </edge>
-    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.ControllerImpl" target="ua.edu.sumdu.j2se.radchenko.tasks.controller.Controller" relationship="GENERALIZATION">
-      <point x="31.625" y="-39.0" />
-      <point x="313.16666666666663" y="2440.0" />
-      <point x="429.54166666666663" y="2440.0" />
-      <point x="429.54166666666663" y="1968.0" />
-      <point x="434.79166666666663" y="1968.0" />
-      <point x="434.79166666666663" y="1938.0" />
-      <point x="443.34384984025473" y="1938.0" />
-      <point x="66.33333333333331" y="50.0" />
-    </edge>
-    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.AddTaskController" target="ua.edu.sumdu.j2se.radchenko.tasks.view.View" relationship="DEPENDENCY">
-      <point x="0.0" y="-61.0" />
-      <point x="711.375" y="2244.0" />
-      <point x="518.5105165069215" y="2244.0" />
-      <point x="518.5105165069215" y="1784.0" />
-      <point x="236.60010649627247" y="1784.0" />
-      <point x="236.60010649627247" y="1764.0" />
-      <point x="505.2605165069215" y="1764.0" />
-      <point x="-68.33333333333331" y="27.0" />
-    </edge>
-    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.model.LinkedTaskList" target="ua.edu.sumdu.j2se.radchenko.tasks.model.ListTypes.types" relationship="DEPENDENCY">
-      <point x="-65.625" y="-128.0" />
-      <point x="772.7034078807234" y="726.0" />
-      <point x="16.0" y="726.0" />
-      <point x="16.0" y="686.0" />
-      <point x="117.00000000000006" y="686.0" />
-      <point x="0.0" y="50.0" />
-    </edge>
-    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.model.TaskListFactory" target="ua.edu.sumdu.j2se.radchenko.tasks.model.LinkedTaskList" relationship="CREATE">
-      <point x="61.5" y="-39.0" />
-      <point x="312.00000000000006" y="1046.0" />
-      <point x="864.6417731629392" y="1046.0" />
-      <point x="864.6417731629392" y="1026.0" />
-      <point x="794.5784078807234" y="1026.0" />
-      <point x="-43.75" y="128.0" />
-    </edge>
-    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.Controller" target="ua.edu.sumdu.j2se.radchenko.tasks.model.AbstractTaskList" relationship="DEPENDENCY">
-      <point x="-49.75" y="-50.0" />
-      <point x="327.2605165069214" y="1794.0" />
-      <point x="116.95833333333331" y="1794.0" />
-      <point x="116.95833333333331" y="1488.0" />
-      <point x="685.548123003194" y="1488.0" />
-      <point x="685.548123003194" y="1478.0" />
-      <point x="485.82927316293916" y="1478.0" />
-      <point x="43.0" y="128.0" />
-    </edge>
-    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.ControllerImpl" target="ua.edu.sumdu.j2se.radchenko.tasks.model.AbstractTaskList" relationship="DEPENDENCY">
-      <point x="-31.625" y="-39.0" />
-      <point x="249.91666666666663" y="2440.0" />
-      <point x="106.45833333333331" y="2440.0" />
-      <point x="106.45833333333331" y="1488.0" />
-      <point x="685.548123003194" y="1488.0" />
-      <point x="685.548123003194" y="1478.0" />
-      <point x="485.82927316293916" y="1478.0" />
-      <point x="43.0" y="128.0" />
-    </edge>
-    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.model.TaskListFactory" target="ua.edu.sumdu.j2se.radchenko.tasks.model.ListTypes.types" relationship="DEPENDENCY">
-      <point x="-61.5" y="-39.0" />
-      <point x="189.00000000000006" y="1046.0" />
-      <point x="38.219715122470575" y="1046.0" />
-      <point x="38.219715122470575" y="1036.0" />
-      <point x="111.75000000000006" y="1036.0" />
-      <point x="111.75000000000006" y="706.0" />
-      <point x="117.00000000000006" y="706.0" />
-      <point x="0.0" y="50.0" />
-    </edge>
-    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.model.ArrayTaskList" target="ua.edu.sumdu.j2se.radchenko.tasks.model.ListTypes" relationship="DEPENDENCY">
-      <point x="-58.33333333333326" y="-117.0" />
-      <point x="1152.3238817891374" y="716.0" />
-      <point x="26.0" y="716.0" />
-      <point x="26.0" y="497.0" />
-      <point x="10.5" y="497.0" />
-      <point x="10.5" y="487.0" />
-      <point x="28.0" y="487.0" />
-      <point x="-28.0" y="27.0" />
-    </edge>
-    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.AddTaskController" target="ua.edu.sumdu.j2se.radchenko.tasks.controller.Controller" relationship="GENERALIZATION">
-      <point x="-87.0" y="-61.0" />
-      <point x="624.375" y="2254.0" />
-      <point x="440.04166666666663" y="2254.0" />
-      <point x="440.04166666666663" y="1968.0" />
-      <point x="434.79166666666663" y="1968.0" />
-      <point x="434.79166666666663" y="1938.0" />
-      <point x="443.34384984025473" y="1938.0" />
-      <point x="66.33333333333331" y="50.0" />
-    </edge>
-    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.view.AddTaskView" target="ua.edu.sumdu.j2se.radchenko.tasks.view.View" relationship="REALIZATION">
-      <point x="51.75" y="-116.0" />
-      <point x="738.678048455804" y="1968.0" />
-      <point x="651.053048455804" y="1968.0" />
-      <point x="651.053048455804" y="1938.0" />
-      <point x="686.5105165069215" y="1938.0" />
-      <point x="686.5105165069215" y="1784.0" />
-      <point x="641.927183173588" y="1784.0" />
-      <point x="68.33333333333326" y="27.0" />
-    </edge>
-    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.model.LinkedTaskList.Node" target="ua.edu.sumdu.j2se.radchenko.tasks.model.Task" relationship="TO_ONE">
-      <point x="36.749999999999886" y="-73.0" />
-      <point x="1088.75" y="497.0" />
-      <point x="1057.9697151224705" y="497.0" />
-      <point x="1057.9697151224705" y="487.0" />
-      <point x="956.360623003194" y="487.0" />
-      <point x="0.0" y="228.0" />
-    </edge>
-    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.view.AddTaskView" target="ua.edu.sumdu.j2se.radchenko.tasks.controller.Controller" relationship="DEPENDENCY">
-      <point x="-51.75" y="-116.0" />
-      <point x="635.875" y="1948.0" />
-      <point x="418.54166666666663" y="1948.0" />
-      <point x="418.54166666666663" y="1938.0" />
-      <point x="377.0105165069214" y="1938.0" />
-      <point x="0.0" y="50.0" />
-    </edge>
-    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.model.TaskListFactory" target="ua.edu.sumdu.j2se.radchenko.tasks.model.AbstractTaskList" relationship="DEPENDENCY">
-      <point x="0.0" y="39.0" />
-      <point x="250.50000000000006" y="1168.0" />
-      <point x="88.71971512247057" y="1168.0" />
-      <point x="88.71971512247057" y="1178.0" />
-      <point x="399.82927316293916" y="1178.0" />
-      <point x="-43.0" y="-128.0" />
-    </edge>
-    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.model.AbstractTaskList" target="ua.edu.sumdu.j2se.radchenko.tasks.model.TaskListFactory" relationship="DEPENDENCY">
-      <point x="-43.0" y="-128.0" />
-      <point x="399.82927316293916" y="1178.0" />
-      <point x="88.71971512247057" y="1178.0" />
-      <point x="88.71971512247057" y="1168.0" />
-      <point x="250.50000000000006" y="1168.0" />
-      <point x="0.0" y="39.0" />
-    </edge>
-    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.ControllerImpl" target="ua.edu.sumdu.j2se.radchenko.tasks.view.View" relationship="DEPENDENCY">
-      <point x="-31.625" y="-39.0" />
-      <point x="249.91666666666663" y="2440.0" />
-      <point x="204.17718317358805" y="2440.0" />
-      <point x="204.17718317358805" y="1784.0" />
-      <point x="236.60010649627247" y="1784.0" />
-      <point x="236.60010649627247" y="1764.0" />
-      <point x="505.2605165069215" y="1764.0" />
-      <point x="-68.33333333333331" y="27.0" />
-    </edge>
-    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.Controller" target="ua.edu.sumdu.j2se.radchenko.tasks.view.View" relationship="DEPENDENCY">
-      <point x="-49.75" y="-50.0" />
-      <point x="327.2605165069214" y="1794.0" />
-      <point x="116.95833333333331" y="1794.0" />
-      <point x="116.95833333333331" y="1774.0" />
-      <point x="236.60010649627247" y="1774.0" />
-      <point x="236.60010649627247" y="1764.0" />
-      <point x="505.2605165069215" y="1764.0" />
-      <point x="-68.33333333333331" y="27.0" />
-    </edge>
-    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.model.ArrayTaskList" target="ua.edu.sumdu.j2se.radchenko.tasks.model.AbstractTaskList" relationship="GENERALIZATION">
-      <point x="-43.75" y="117.0" />
-      <point x="1166.9072151224705" y="1026.0" />
-      <point x="1069.5625" y="1026.0" />
-      <point x="1069.5625" y="1168.0" />
-      <point x="880.1417731629392" y="1168.0" />
-      <point x="880.1417731629392" y="1178.0" />
-      <point x="485.82927316293916" y="1178.0" />
-      <point x="43.0" y="-128.0" />
-    </edge>
-    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.Main" target="ua.edu.sumdu.j2se.radchenko.tasks.view.View" relationship="DEPENDENCY">
-      <point x="-37.24999999999994" y="-39.0" />
-      <point x="439.70833333333337" y="2591.0" />
-      <point x="144.54166666666663" y="2591.0" />
-      <point x="144.54166666666663" y="1784.0" />
-      <point x="236.60010649627247" y="1784.0" />
-      <point x="236.60010649627247" y="1764.0" />
-      <point x="505.2605165069215" y="1764.0" />
-      <point x="-68.33333333333331" y="27.0" />
-    </edge>
-    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.view.ViewImpl" target="ua.edu.sumdu.j2se.radchenko.tasks.view.View" relationship="REALIZATION">
-      <point x="-51.25" y="-39.0" />
-      <point x="839.803048455804" y="1794.0" />
-      <point x="686.5105165069215" y="1794.0" />
-      <point x="686.5105165069215" y="1784.0" />
-      <point x="641.927183173588" y="1784.0" />
-      <point x="68.33333333333326" y="27.0" />
-    </edge>
-    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.view.AddTaskView" target="ua.edu.sumdu.j2se.radchenko.tasks.view.Action" relationship="REALIZATION">
-      <point x="51.75" y="-116.0" />
-      <point x="738.678048455804" y="1968.0" />
-      <point x="651.053048455804" y="1968.0" />
-      <point x="651.053048455804" y="1938.0" />
-      <point x="602.5105165069215" y="1938.0" />
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.ChangeTaskController" target="ua.edu.sumdu.j2se.radchenko.tasks.controller.Errors" relationship="DEPENDENCY">
+      <point x="-57.75" y="-93.5" />
+      <point x="654.7324188562595" y="2929.0" />
+      <point x="623.6896895929933" y="2929.0" />
+      <point x="623.6896895929933" y="2899.0" />
+      <point x="1640.5" y="2899.0" />
       <point x="0.0" y="27.0" />
     </edge>
-    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.model.AbstractTaskList" target="ua.edu.sumdu.j2se.radchenko.tasks.model.ListTypes" relationship="DEPENDENCY">
-      <point x="-43.0" y="-128.0" />
-      <point x="399.82927316293916" y="1178.0" />
-      <point x="88.71971512247057" y="1178.0" />
-      <point x="88.71971512247057" y="1168.0" />
-      <point x="0.25" y="1168.0" />
-      <point x="0.25" y="497.0" />
-      <point x="10.5" y="497.0" />
-      <point x="10.5" y="487.0" />
-      <point x="28.0" y="487.0" />
-      <point x="-28.0" y="27.0" />
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.DeleteTaskController" target="ua.edu.sumdu.j2se.radchenko.tasks.controller.Controller" relationship="GENERALIZATION">
+      <point x="53.5" y="-49.5" />
+      <point x="1506.6896895929933" y="2929.0" />
+      <point x="1696.0" y="2929.0" />
+      <point x="1696.0" y="2262.0" />
+      <point x="2146.814689592993" y="2262.0" />
+      <point x="0.0" y="72.5" />
     </edge>
-    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.Main" target="ua.edu.sumdu.j2se.radchenko.tasks.controller.ControllerImpl" relationship="CREATE">
-      <point x="37.25000000000006" y="-39.0" />
-      <point x="514.2083333333335" y="2591.0" />
-      <point x="860.7083333333335" y="2591.0" />
-      <point x="860.7083333333335" y="2571.0" />
-      <point x="281.5416666666667" y="2571.0" />
-      <point x="0.0" y="39.0" />
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.NotificatorController" target="ua.edu.sumdu.j2se.radchenko.tasks.model.Task" relationship="DEPENDENCY">
+      <point x="-85.75" y="-38.5" />
+      <point x="2324.25" y="1608.0" />
+      <point x="3305.4375" y="1608.0" />
+      <point x="3305.4375" y="1558.0" />
+      <point x="3356.939689592993" y="1558.0" />
+      <point x="3356.939689592993" y="514.0" />
+      <point x="1515.1313433797009" y="514.0" />
+      <point x="1515.1313433797009" y="484.0" />
+      <point x="3091.4230100463674" y="484.0" />
+      <point x="-102.0" y="226.5" />
     </edge>
-    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.model.ListTypes.types" target="ua.edu.sumdu.j2se.radchenko.tasks.model.ListTypes" relationship="INNER_CLASS">
-      <point x="0.0" y="-50.0" />
-      <point x="117.0" y="497.0" />
-      <point x="84.0" y="497.0" />
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.model.ArrayTaskList" target="ua.edu.sumdu.j2se.radchenko.tasks.model.Task" relationship="TO_ONE">
+      <point x="58.333333333333485" y="-116.0" />
+      <point x="3317.273022926327" y="741.0" />
+      <point x="3246.2730229263266" y="741.0" />
+      <point x="3246.2730229263266" y="524.0" />
+      <point x="3227.068843379701" y="524.0" />
+      <point x="3227.068843379701" y="494.0" />
+      <point x="3295.4230100463674" y="494.0" />
+      <point x="102.0" y="226.5" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.NotificatorController" target="ua.edu.sumdu.j2se.radchenko.tasks.view.NotificatorView" relationship="DEPENDENCY">
+      <point x="-85.75" y="-38.5" />
+      <point x="2324.25" y="1608.0" />
+      <point x="3305.4375" y="1608.0" />
+      <point x="3305.4375" y="1578.0" />
+      <point x="3389.270833333333" y="1578.0" />
+      <point x="3389.270833333333" y="1508.0" />
+      <point x="3406.60635625966" y="1508.0" />
+      <point x="-78.33333333333348" y="38.5" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.view.SaveLoadView" target="ua.edu.sumdu.j2se.radchenko.tasks.controller.Controller" relationship="DEPENDENCY">
+      <point x="-51.25" y="-60.5" />
+      <point x="1127.75" y="2282.0" />
+      <point x="1174.0" y="2282.0" />
+      <point x="1174.0" y="2192.0" />
+      <point x="706.0" y="2192.0" />
+      <point x="706.0" y="2132.0" />
+      <point x="2080.48135625966" y="2132.0" />
+      <point x="-66.33333333333348" y="72.5" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.view.CalendarView" target="ua.edu.sumdu.j2se.radchenko.tasks.model.Tasks" relationship="DEPENDENCY">
+      <point x="-51.75" y="-82.5" />
+      <point x="654.25" y="2282.0" />
+      <point x="700.75" y="2282.0" />
+      <point x="700.75" y="2202.0" />
+      <point x="695.5" y="2202.0" />
+      <point x="695.5" y="1548.0" />
+      <point x="2283.131343379701" y="1548.0" />
+      <point x="0.0" y="49.5" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.view.DeleteTaskView" target="ua.edu.sumdu.j2se.radchenko.tasks.view.Action" relationship="REALIZATION">
+      <point x="-51.25" y="-60.5" />
+      <point x="889.125" y="2282.0" />
+      <point x="898.375" y="2282.0" />
+      <point x="898.375" y="2272.0" />
+      <point x="940.375" y="2272.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.CheckAllTaskController" target="ua.edu.sumdu.j2se.radchenko.tasks.view.View" relationship="DEPENDENCY">
+      <point x="57.0" y="-38.5" />
+      <point x="2497.9824188562598" y="2282.0" />
+      <point x="2462.2324188562598" y="2282.0" />
+      <point x="2462.2324188562598" y="2242.0" />
+      <point x="2256.814689592993" y="2242.0" />
+      <point x="2256.814689592993" y="1923.0" />
+      <point x="1820.0" y="1923.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.model.LinkedTaskList.Node" target="ua.edu.sumdu.j2se.radchenko.tasks.model.Task" relationship="DEPENDENCY">
+      <point x="-36.75" y="-72.0" />
+      <point x="3049.939689592993" y="514.0" />
+      <point x="1515.1313433797009" y="514.0" />
+      <point x="1515.1313433797009" y="484.0" />
+      <point x="3091.4230100463674" y="484.0" />
+      <point x="-102.0" y="226.5" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.AddTaskController" target="ua.edu.sumdu.j2se.radchenko.tasks.controller.Errors" relationship="DEPENDENCY">
+      <point x="-87.0" y="-60.5" />
+      <point x="3338.770833333333" y="2929.0" />
+      <point x="2508.4824188562598" y="2929.0" />
+      <point x="2508.4824188562598" y="2879.0" />
+      <point x="1640.5" y="2879.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.view.CalendarView" target="ua.edu.sumdu.j2se.radchenko.tasks.controller.Controller" relationship="DEPENDENCY">
+      <point x="-51.75" y="-82.5" />
+      <point x="654.25" y="2282.0" />
+      <point x="700.75" y="2282.0" />
+      <point x="700.75" y="2242.0" />
+      <point x="706.0" y="2242.0" />
+      <point x="706.0" y="2132.0" />
+      <point x="2080.48135625966" y="2132.0" />
+      <point x="-66.33333333333348" y="72.5" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.model.ArrayTaskList" target="ua.edu.sumdu.j2se.radchenko.tasks.model.Task" relationship="CREATE">
+      <point x="0.0" y="-116.0" />
+      <point x="3258.939689592993" y="751.0" />
+      <point x="3235.2730229263266" y="751.0" />
+      <point x="3235.2730229263266" y="504.0" />
+      <point x="3193.4230100463674" y="504.0" />
+      <point x="0.0" y="226.5" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.SaveLoadController" target="ua.edu.sumdu.j2se.radchenko.tasks.model.TaskIO" relationship="DEPENDENCY">
+      <point x="-52.0" y="-60.5" />
+      <point x="1721.6896895929933" y="2809.0" />
+      <point x="1862.9396895929933" y="2809.0" />
+      <point x="1862.9396895929933" y="1913.0" />
+      <point x="2080.0" y="1913.0" />
+      <point x="0.0" y="115.5" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.SaveLoadController" target="ua.edu.sumdu.j2se.radchenko.tasks.model.AbstractTaskList" relationship="DEPENDENCY">
+      <point x="-52.0" y="-60.5" />
+      <point x="1721.6896895929933" y="2809.0" />
+      <point x="1707.0" y="2809.0" />
+      <point x="1707.0" y="1588.0" />
+      <point x="1338.6313433797009" y="1588.0" />
+      <point x="1338.6313433797009" y="1518.0" />
+      <point x="2909.943843379701" y="1518.0" />
+      <point x="-43.0" y="127.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.CalendarController" target="ua.edu.sumdu.j2se.radchenko.tasks.model.AbstractTaskList" relationship="DEPENDENCY">
+      <point x="-51.25" y="-38.5" />
+      <point x="1128.5646895929933" y="2829.0" />
+      <point x="1066.0" y="2829.0" />
+      <point x="1066.0" y="1588.0" />
+      <point x="1338.6313433797009" y="1588.0" />
+      <point x="1338.6313433797009" y="1518.0" />
+      <point x="2909.943843379701" y="1518.0" />
+      <point x="-43.0" y="127.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.ControllerImpl" target="ua.edu.sumdu.j2se.radchenko.tasks.model.AbstractTaskList" relationship="DEPENDENCY">
+      <point x="-31.625" y="-38.5" />
+      <point x="3568.4375" y="3180.0" />
+      <point x="3645.439689592993" y="3180.0" />
+      <point x="3645.439689592993" y="1588.0" />
+      <point x="1338.6313433797006" y="1588.0" />
+      <point x="1338.6313433797009" y="1518.0" />
+      <point x="2909.943843379701" y="1518.0" />
+      <point x="-43.0" y="127.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.ChangeTaskController" target="ua.edu.sumdu.j2se.radchenko.tasks.model.AbstractTaskList" relationship="DEPENDENCY">
+      <point x="-57.75" y="-93.5" />
+      <point x="654.7324188562595" y="2929.0" />
+      <point x="623.6896895929933" y="2929.0" />
+      <point x="623.6896895929933" y="2839.0" />
+      <point x="592.0" y="2839.0" />
+      <point x="592.0" y="1588.0" />
+      <point x="1338.6313433797009" y="1588.0" />
+      <point x="1338.6313433797009" y="1518.0" />
+      <point x="2909.943843379701" y="1518.0" />
+      <point x="-43.0" y="127.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.model.TaskListFactory" target="ua.edu.sumdu.j2se.radchenko.tasks.model.ListTypes.types" relationship="DEPENDENCY">
+      <point x="-61.5" y="-38.5" />
+      <point x="2770.939689592993" y="1079.0" />
+      <point x="2861.939689592993" y="1079.0" />
+      <point x="0.0" y="49.5" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.model.ArrayTaskList" target="ua.edu.sumdu.j2se.radchenko.tasks.model.ListTypes" relationship="DEPENDENCY">
+      <point x="-58.333333333333485" y="-116.0" />
+      <point x="3200.60635625966" y="751.0" />
+      <point x="3205.068843379701" y="751.0" />
+      <point x="3205.068843379701" y="534.0" />
+      <point x="2915.631343379701" y="534.0" />
+      <point x="2915.631343379701" y="474.0" />
+      <point x="2891.631343379701" y="474.0" />
       <point x="28.0" y="27.0" />
     </edge>
-    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.ControllerImpl" target="ua.edu.sumdu.j2se.radchenko.tasks.model.AbstractTaskList" relationship="TO_ONE">
-      <point x="-94.875" y="-39.0" />
-      <point x="186.66666666666663" y="2450.0" />
-      <point x="214.0625" y="2450.0" />
-      <point x="214.0625" y="2430.0" />
-      <point x="95.45833333333331" y="2430.0" />
-      <point x="95.45833333333331" y="1478.0" />
-      <point x="399.82927316293916" y="1478.0" />
-      <point x="-43.0" y="128.0" />
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.AddTaskController" target="ua.edu.sumdu.j2se.radchenko.tasks.controller.Controller" relationship="GENERALIZATION">
+      <point x="0.0" y="-60.5" />
+      <point x="3425.770833333333" y="2929.0" />
+      <point x="3463.770833333333" y="2929.0" />
+      <point x="3463.770833333333" y="2262.0" />
+      <point x="2146.814689592993" y="2262.0" />
+      <point x="0.0" y="72.5" />
     </edge>
-    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.model.LinkedTaskList" target="ua.edu.sumdu.j2se.radchenko.tasks.model.ListTypes" relationship="DEPENDENCY">
-      <point x="-65.625" y="-128.0" />
-      <point x="772.7034078807234" y="726.0" />
-      <point x="16.0" y="726.0" />
-      <point x="16.0" y="497.0" />
-      <point x="10.5" y="497.0" />
-      <point x="10.5" y="487.0" />
-      <point x="28.0" y="487.0" />
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.ControllerImpl" target="ua.edu.sumdu.j2se.radchenko.tasks.view.DeleteTaskView" relationship="CREATE">
+      <point x="-94.875" y="-38.5" />
+      <point x="3505.1875" y="3180.0" />
+      <point x="839.7324188562595" y="3180.0" />
+      <point x="839.7324188562595" y="3160.0" />
+      <point x="460.0" y="3160.0" />
+      <point x="460.0" y="2859.0" />
+      <point x="889.125" y="2859.0" />
+      <point x="-51.25" y="60.5" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.model.AbstractTaskList" target="ua.edu.sumdu.j2se.radchenko.tasks.model.TaskListFactory" relationship="DEPENDENCY">
+      <point x="-43.0" y="-127.0" />
+      <point x="2909.943843379701" y="1210.0" />
+      <point x="2776.881343379701" y="1210.0" />
+      <point x="2776.881343379701" y="1200.0" />
+      <point x="2832.439689592993" y="1200.0" />
+      <point x="0.0" y="38.5" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.model.TaskListFactory" target="ua.edu.sumdu.j2se.radchenko.tasks.model.AbstractTaskList" relationship="DEPENDENCY">
+      <point x="0.0" y="38.5" />
+      <point x="2832.439689592993" y="1200.0" />
+      <point x="2776.881343379701" y="1200.0" />
+      <point x="2776.881343379701" y="1210.0" />
+      <point x="2909.943843379701" y="1210.0" />
+      <point x="-43.0" y="-127.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.ControllerImpl" target="ua.edu.sumdu.j2se.radchenko.tasks.view.View" relationship="DEPENDENCY">
+      <point x="-31.625" y="-38.5" />
+      <point x="3568.4375" y="3180.0" />
+      <point x="3645.439689592993" y="3180.0" />
+      <point x="3645.439689592993" y="1923.0" />
+      <point x="1820.0" y="1923.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.CalendarController" target="ua.edu.sumdu.j2se.radchenko.tasks.controller.Errors" relationship="DEPENDENCY">
+      <point x="-51.25" y="-38.5" />
+      <point x="1128.5646895929933" y="2909.0" />
+      <point x="1640.5" y="2909.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.model.ArrayTaskList" target="ua.edu.sumdu.j2se.radchenko.tasks.model.AbstractTaskList" relationship="GENERALIZATION">
+      <point x="-43.75" y="116.0" />
+      <point x="3215.189689592993" y="1200.0" />
+      <point x="3157.318843379701" y="1200.0" />
+      <point x="3157.318843379701" y="1210.0" />
+      <point x="2995.943843379701" y="1210.0" />
+      <point x="43.0" y="-127.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.NotificatorController" target="ua.edu.sumdu.j2se.radchenko.tasks.model.Tasks" relationship="DEPENDENCY">
+      <point x="-85.75" y="-38.5" />
+      <point x="2324.25" y="1608.0" />
+      <point x="3305.4375" y="1608.0" />
+      <point x="3305.4375" y="1528.0" />
+      <point x="2283.131343379701" y="1528.0" />
+      <point x="0.0" y="49.5" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.Main" target="ua.edu.sumdu.j2se.radchenko.tasks.view.View" relationship="DEPENDENCY">
+      <point x="-37.25" y="-38.5" />
+      <point x="1847.2563433797009" y="3310.0" />
+      <point x="51.0" y="3310.0" />
+      <point x="51.0" y="3300.0" />
+      <point x="0.0" y="3300.0" />
+      <point x="0.0" y="1923.0" />
+      <point x="1820.0" y="1923.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.ChangeTaskController" target="ua.edu.sumdu.j2se.radchenko.tasks.controller.Controller" relationship="GENERALIZATION">
+      <point x="57.75" y="-93.5" />
+      <point x="770.2324188562595" y="2869.0" />
+      <point x="1053.375" y="2869.0" />
+      <point x="1053.375" y="2262.0" />
+      <point x="2146.814689592993" y="2262.0" />
+      <point x="0.0" y="72.5" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.NotificatorController" target="ua.edu.sumdu.j2se.radchenko.tasks.model.AbstractTaskList" relationship="DEPENDENCY">
+      <point x="-85.75" y="-38.5" />
+      <point x="2324.25" y="1608.0" />
+      <point x="3305.4375" y="1608.0" />
+      <point x="3305.4375" y="1538.0" />
+      <point x="1338.6313433797009" y="1538.0" />
+      <point x="1338.6313433797009" y="1518.0" />
+      <point x="2909.943843379701" y="1518.0" />
+      <point x="-43.0" y="127.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.view.DeleteTaskView" target="ua.edu.sumdu.j2se.radchenko.tasks.view.View" relationship="REALIZATION">
+      <point x="-51.25" y="-60.5" />
+      <point x="889.125" y="2282.0" />
+      <point x="898.375" y="2282.0" />
+      <point x="898.375" y="2242.0" />
+      <point x="856.375" y="2242.0" />
+      <point x="856.375" y="1943.0" />
+      <point x="716.5" y="1943.0" />
+      <point x="716.5" y="1913.0" />
+      <point x="1751.6666666666667" y="1913.0" />
+      <point x="-68.33333333333326" y="27.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.CheckAllTaskController" target="ua.edu.sumdu.j2se.radchenko.tasks.model.AbstractTaskList" relationship="DEPENDENCY">
+      <point x="57.0" y="-38.5" />
+      <point x="2497.9824188562598" y="2282.0" />
+      <point x="2462.2324188562598" y="2282.0" />
+      <point x="2462.2324188562598" y="2242.0" />
+      <point x="2592.0" y="2242.0" />
+      <point x="2592.0" y="1588.0" />
+      <point x="1338.6313433797009" y="1588.0" />
+      <point x="1338.6313433797009" y="1518.0" />
+      <point x="2909.943843379701" y="1518.0" />
+      <point x="-43.0" y="127.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.NotificatorController" target="ua.edu.sumdu.j2se.radchenko.tasks.view.NotificatorView" relationship="TO_ONE">
+      <point x="85.75" y="-38.5" />
+      <point x="2495.75" y="1598.0" />
+      <point x="3500.818843379701" y="1598.0" />
+      <point x="3500.818843379701" y="1568.0" />
+      <point x="3484.939689592993" y="1568.0" />
+      <point x="0.0" y="38.5" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.SaveLoadController" target="ua.edu.sumdu.j2se.radchenko.tasks.controller.Errors" relationship="DEPENDENCY">
+      <point x="-52.0" y="-60.5" />
+      <point x="1721.6896895929933" y="2889.0" />
+      <point x="1640.5" y="2889.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.view.CalendarView" target="ua.edu.sumdu.j2se.radchenko.tasks.model.AbstractTaskList" relationship="DEPENDENCY">
+      <point x="-51.75" y="-82.5" />
+      <point x="654.25" y="2282.0" />
+      <point x="700.75" y="2282.0" />
+      <point x="700.75" y="2202.0" />
+      <point x="695.5" y="2202.0" />
+      <point x="695.5" y="1588.0" />
+      <point x="1338.6313433797009" y="1588.0" />
+      <point x="1338.6313433797009" y="1518.0" />
+      <point x="2909.943843379701" y="1518.0" />
+      <point x="-43.0" y="127.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.DeleteTaskController" target="ua.edu.sumdu.j2se.radchenko.tasks.view.DeleteTaskView" relationship="DEPENDENCY">
+      <point x="-53.5" y="-49.5" />
+      <point x="1399.6896895929933" y="2819.0" />
+      <point x="991.625" y="2819.0" />
+      <point x="51.25" y="60.5" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.model.ListTypes.types" target="ua.edu.sumdu.j2se.radchenko.tasks.model.ListTypes" relationship="INNER_CLASS">
+      <point x="0.0" y="-49.5" />
+      <point x="2861.939689592993" y="494.0" />
+      <point x="2835.631343379701" y="494.0" />
       <point x="-28.0" y="27.0" />
     </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.view.CalendarView" target="ua.edu.sumdu.j2se.radchenko.tasks.view.Action" relationship="REALIZATION">
+      <point x="51.75" y="-82.5" />
+      <point x="757.75" y="2282.0" />
+      <point x="716.5" y="2282.0" />
+      <point x="716.5" y="2262.0" />
+      <point x="940.375" y="2262.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.view.ChangeTaskView" target="ua.edu.sumdu.j2se.radchenko.tasks.model.Task" relationship="DEPENDENCY">
+      <point x="-58.25" y="-236.5" />
+      <point x="406.75" y="2282.0" />
+      <point x="405.25634337970087" y="2282.0" />
+      <point x="405.25634337970087" y="514.0" />
+      <point x="1515.1313433797009" y="514.0" />
+      <point x="1515.1313433797009" y="484.0" />
+      <point x="3091.4230100463674" y="484.0" />
+      <point x="-102.0" y="226.5" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.model.LinkedTaskList" target="ua.edu.sumdu.j2se.radchenko.tasks.model.ListTypes" relationship="DEPENDENCY">
+      <point x="-65.625" y="-127.0" />
+      <point x="2998.314689592993" y="751.0" />
+      <point x="2987.377189592993" y="751.0" />
+      <point x="2987.377189592993" y="534.0" />
+      <point x="2915.631343379701" y="534.0" />
+      <point x="2915.631343379701" y="474.0" />
+      <point x="2891.631343379701" y="474.0" />
+      <point x="28.0" y="27.0" />
+    </edge>
     <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.AddTaskController" target="ua.edu.sumdu.j2se.radchenko.tasks.model.Task" relationship="CREATE">
-      <point x="87.0" y="-61.0" />
-      <point x="798.375" y="2264.0" />
-      <point x="1345.553048455804" y="2264.0" />
-      <point x="1345.553048455804" y="497.0" />
-      <point x="1254.7188498402547" y="497.0" />
-      <point x="1254.7188498402547" y="477.0" />
-      <point x="1058.360623003194" y="477.0" />
-      <point x="102.0" y="228.0" />
+      <point x="87.0" y="-60.5" />
+      <point x="3512.770833333333" y="2929.0" />
+      <point x="3612.939689592993" y="2929.0" />
+      <point x="3612.939689592993" y="504.0" />
+      <point x="3193.4230100463674" y="504.0" />
+      <point x="0.0" y="226.5" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.SaveLoadController" target="ua.edu.sumdu.j2se.radchenko.tasks.controller.Controller" relationship="GENERALIZATION">
+      <point x="52.0" y="-60.5" />
+      <point x="1825.6896895929933" y="2929.0" />
+      <point x="2146.814689592993" y="2929.0" />
+      <point x="0.0" y="72.5" />
     </edge>
     <edge source="ua.edu.sumdu.j2se.radchenko.tasks.model.LinkedTaskList.Node" target="ua.edu.sumdu.j2se.radchenko.tasks.model.LinkedTaskList" relationship="INNER_CLASS">
-      <point x="0.0" y="73.0" />
-      <point x="1052.0" y="706.0" />
-      <point x="860.2034078807234" y="706.0" />
-      <point x="21.875" y="-128.0" />
+      <point x="49.0" y="72.0" />
+      <point x="3135.689689592993" y="731.0" />
+      <point x="3129.564689592993" y="731.0" />
+      <point x="65.625" y="-127.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.ControllerImpl" target="ua.edu.sumdu.j2se.radchenko.tasks.view.SaveLoadView" relationship="CREATE">
+      <point x="-94.875" y="-38.5" />
+      <point x="3505.1875" y="3180.0" />
+      <point x="839.7324188562595" y="3180.0" />
+      <point x="839.7324188562595" y="3160.0" />
+      <point x="470.0" y="3160.0" />
+      <point x="470.0" y="2879.0" />
+      <point x="1127.75" y="2879.0" />
+      <point x="-51.25" y="60.5" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.CalendarController" target="ua.edu.sumdu.j2se.radchenko.tasks.controller.Controller" relationship="GENERALIZATION">
+      <point x="51.25" y="-38.5" />
+      <point x="1231.0646895929933" y="2879.0" />
+      <point x="1346.0" y="2879.0" />
+      <point x="1346.0" y="2262.0" />
+      <point x="2146.814689592993" y="2262.0" />
+      <point x="0.0" y="72.5" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.view.DeleteTaskView" target="ua.edu.sumdu.j2se.radchenko.tasks.controller.Controller" relationship="DEPENDENCY">
+      <point x="51.25" y="-60.5" />
+      <point x="991.625" y="2282.0" />
+      <point x="1024.375" y="2282.0" />
+      <point x="1024.375" y="2202.0" />
+      <point x="706.0" y="2202.0" />
+      <point x="706.0" y="2132.0" />
+      <point x="2080.48135625966" y="2132.0" />
+      <point x="-66.33333333333348" y="72.5" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.view.ViewImpl" target="ua.edu.sumdu.j2se.radchenko.tasks.model.AbstractTaskList" relationship="DEPENDENCY">
+      <point x="-51.25" y="-38.5" />
+      <point x="61.75" y="1913.0" />
+      <point x="108.0" y="1913.0" />
+      <point x="108.0" y="1588.0" />
+      <point x="1338.6313433797009" y="1588.0" />
+      <point x="1338.6313433797009" y="1518.0" />
+      <point x="2909.943843379701" y="1518.0" />
+      <point x="-43.0" y="127.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.model.ArrayTaskList" target="ua.edu.sumdu.j2se.radchenko.tasks.model.ListTypes.types" relationship="DEPENDENCY">
+      <point x="-58.333333333333485" y="-116.0" />
+      <point x="3200.60635625966" y="751.0" />
+      <point x="3205.068843379701" y="751.0" />
+      <point x="3205.068843379701" y="721.0" />
+      <point x="2861.939689592993" y="721.0" />
+      <point x="0.0" y="49.5" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.model.TaskListFactory" target="ua.edu.sumdu.j2se.radchenko.tasks.model.ArrayTaskList" relationship="CREATE">
+      <point x="61.5" y="-38.5" />
+      <point x="2893.939689592993" y="1079.0" />
+      <point x="2872.439689592993" y="1079.0" />
+      <point x="2872.439689592993" y="1069.0" />
+      <point x="3225.189689592993" y="1069.0" />
+      <point x="3225.189689592993" y="1049.0" />
+      <point x="3302.689689592993" y="1049.0" />
+      <point x="43.75" y="116.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.model.AbstractTaskList" target="ua.edu.sumdu.j2se.radchenko.tasks.model.Task" relationship="DEPENDENCY">
+      <point x="-43.0" y="-127.0" />
+      <point x="2909.943843379701" y="1210.0" />
+      <point x="2776.881343379701" y="1210.0" />
+      <point x="2776.881343379701" y="1200.0" />
+      <point x="2677.689689592993" y="1200.0" />
+      <point x="2677.689689592993" y="514.0" />
+      <point x="1515.1313433797009" y="514.0" />
+      <point x="1515.1313433797009" y="484.0" />
+      <point x="3091.4230100463674" y="484.0" />
+      <point x="-102.0" y="226.5" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.ControllerImpl" target="ua.edu.sumdu.j2se.radchenko.tasks.controller.CalendarController" relationship="CREATE">
+      <point x="-94.875" y="-38.5" />
+      <point x="3505.1875" y="3180.0" />
+      <point x="839.7324188562595" y="3180.0" />
+      <point x="839.7324188562595" y="3160.0" />
+      <point x="1179.8146895929933" y="3160.0" />
+      <point x="0.0" y="38.5" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.model.TaskListFactory" target="ua.edu.sumdu.j2se.radchenko.tasks.model.ListTypes" relationship="DEPENDENCY">
+      <point x="-61.5" y="-38.5" />
+      <point x="2770.939689592993" y="534.0" />
+      <point x="2915.631343379701" y="534.0" />
+      <point x="2915.631343379701" y="474.0" />
+      <point x="2891.631343379701" y="474.0" />
+      <point x="28.0" y="27.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.view.CheckAllTaskView" target="ua.edu.sumdu.j2se.radchenko.tasks.model.AbstractTaskList" relationship="DEPENDENCY">
+      <point x="-51.25" y="-38.5" />
+      <point x="174.75" y="2282.0" />
+      <point x="383.25634337970087" y="2282.0" />
+      <point x="383.25634337970087" y="1588.0" />
+      <point x="1338.6313433797009" y="1588.0" />
+      <point x="1338.6313433797009" y="1518.0" />
+      <point x="2909.943843379701" y="1518.0" />
+      <point x="-43.0" y="127.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.view.DeleteTaskView" target="ua.edu.sumdu.j2se.radchenko.tasks.model.AbstractTaskList" relationship="DEPENDENCY">
+      <point x="51.25" y="-60.5" />
+      <point x="991.625" y="2282.0" />
+      <point x="1024.375" y="2282.0" />
+      <point x="1024.375" y="1588.0" />
+      <point x="1338.6313433797009" y="1588.0" />
+      <point x="1338.6313433797009" y="1518.0" />
+      <point x="2909.943843379701" y="1518.0" />
+      <point x="-43.0" y="127.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.ControllerImpl" target="ua.edu.sumdu.j2se.radchenko.tasks.controller.Controller" relationship="TO_MANY">
+      <point x="94.875" y="-38.5" />
+      <point x="3694.9375" y="3180.0" />
+      <point x="3667.439689592993" y="3180.0" />
+      <point x="3667.439689592993" y="2252.0" />
+      <point x="2213.148022926327" y="2252.0" />
+      <point x="66.33333333333348" y="72.5" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.model.TaskIO" target="ua.edu.sumdu.j2se.radchenko.tasks.model.Task" relationship="CREATE">
+      <point x="68.75" y="-115.5" />
+      <point x="2148.75" y="1558.0" />
+      <point x="2645.439689592993" y="1558.0" />
+      <point x="2645.439689592993" y="504.0" />
+      <point x="3193.4230100463674" y="504.0" />
+      <point x="0.0" y="226.5" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.ControllerImpl" target="ua.edu.sumdu.j2se.radchenko.tasks.view.ChangeTaskView" relationship="CREATE">
+      <point x="-94.875" y="-38.5" />
+      <point x="3505.1875" y="3180.0" />
+      <point x="839.7324188562595" y="3180.0" />
+      <point x="839.7324188562595" y="3160.0" />
+      <point x="440.0" y="3160.0" />
+      <point x="440.0" y="2929.0" />
+      <point x="406.75" y="2929.0" />
+      <point x="-58.25" y="236.5" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.Main" target="ua.edu.sumdu.j2se.radchenko.tasks.controller.Controller" relationship="DEPENDENCY">
+      <point x="-37.25" y="-38.5" />
+      <point x="1847.2563433797009" y="3310.0" />
+      <point x="51.0" y="3310.0" />
+      <point x="51.0" y="2212.0" />
+      <point x="706.0" y="2212.0" />
+      <point x="706.0" y="2132.0" />
+      <point x="2080.48135625966" y="2132.0" />
+      <point x="-66.33333333333348" y="72.5" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.ControllerImpl" target="ua.edu.sumdu.j2se.radchenko.tasks.controller.SaveLoadController" relationship="CREATE">
+      <point x="-94.875" y="-38.5" />
+      <point x="3505.1875" y="3180.0" />
+      <point x="839.7324188562595" y="3180.0" />
+      <point x="839.7324188562595" y="3160.0" />
+      <point x="1773.6896895929933" y="3160.0" />
+      <point x="0.0" y="60.5" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.CheckAllTaskController" target="ua.edu.sumdu.j2se.radchenko.tasks.controller.Controller" relationship="GENERALIZATION">
+      <point x="-57.0" y="-38.5" />
+      <point x="2383.9824188562598" y="2262.0" />
+      <point x="2146.814689592993" y="2262.0" />
+      <point x="0.0" y="72.5" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.view.ChangeTaskView" target="ua.edu.sumdu.j2se.radchenko.tasks.controller.Controller" relationship="DEPENDENCY">
+      <point x="-58.25" y="-236.5" />
+      <point x="406.75" y="2282.0" />
+      <point x="405.25634337970087" y="2282.0" />
+      <point x="405.25634337970087" y="2232.0" />
+      <point x="706.0" y="2232.0" />
+      <point x="706.0" y="2132.0" />
+      <point x="2080.48135625966" y="2132.0" />
+      <point x="-66.33333333333348" y="72.5" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.model.LinkedTaskList" target="ua.edu.sumdu.j2se.radchenko.tasks.model.AbstractTaskList" relationship="GENERALIZATION">
+      <point x="43.75" y="127.0" />
+      <point x="3107.689689592993" y="1200.0" />
+      <point x="3157.318843379701" y="1200.0" />
+      <point x="3157.318843379701" y="1210.0" />
+      <point x="2995.943843379701" y="1210.0" />
+      <point x="43.0" y="-127.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.ControllerImpl" target="ua.edu.sumdu.j2se.radchenko.tasks.view.AddTaskView" relationship="CREATE">
+      <point x="-94.875" y="-38.5" />
+      <point x="3505.1875" y="3180.0" />
+      <point x="839.7324188562595" y="3180.0" />
+      <point x="839.7324188562595" y="3160.0" />
+      <point x="480.0" y="3160.0" />
+      <point x="480.0" y="2889.0" />
+      <point x="1419.25" y="2889.0" />
+      <point x="-51.75" y="115.5" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.ControllerImpl" target="ua.edu.sumdu.j2se.radchenko.tasks.controller.AddTaskController" relationship="CREATE">
+      <point x="-94.875" y="-38.5" />
+      <point x="3505.1875" y="3180.0" />
+      <point x="839.7324188562595" y="3180.0" />
+      <point x="839.7324188562595" y="3160.0" />
+      <point x="3425.770833333333" y="3160.0" />
+      <point x="0.0" y="60.5" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.view.SaveLoadView" target="ua.edu.sumdu.j2se.radchenko.tasks.view.View" relationship="REALIZATION">
+      <point x="51.25" y="-60.5" />
+      <point x="1230.25" y="2282.0" />
+      <point x="1184.0" y="2282.0" />
+      <point x="1184.0" y="2172.0" />
+      <point x="1143.125" y="2172.0" />
+      <point x="1143.125" y="1943.0" />
+      <point x="716.5" y="1943.0" />
+      <point x="716.5" y="1913.0" />
+      <point x="1751.6666666666667" y="1913.0" />
+      <point x="-68.33333333333326" y="27.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.AddTaskController" target="ua.edu.sumdu.j2se.radchenko.tasks.view.AddTaskView" relationship="DEPENDENCY">
+      <point x="-87.0" y="-60.5" />
+      <point x="3338.770833333333" y="2929.0" />
+      <point x="2508.4824188562598" y="2929.0" />
+      <point x="2508.4824188562598" y="2799.0" />
+      <point x="1522.75" y="2799.0" />
+      <point x="51.75" y="115.5" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.Controller" target="ua.edu.sumdu.j2se.radchenko.tasks.controller.NotificatorController" relationship="DEPENDENCY">
+      <point x="-49.75" y="-72.5" />
+      <point x="2097.064689592993" y="1943.0" />
+      <point x="2270.939689592993" y="1943.0" />
+      <point x="2270.939689592993" y="1883.0" />
+      <point x="2295.6666666666665" y="1883.0" />
+      <point x="-114.33333333333348" y="38.5" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.Main" target="ua.edu.sumdu.j2se.radchenko.tasks.model.AbstractTaskList" relationship="DEPENDENCY">
+      <point x="-37.25" y="-38.5" />
+      <point x="1847.2563433797009" y="3310.0" />
+      <point x="51.0" y="3310.0" />
+      <point x="51.0" y="3300.0" />
+      <point x="0.0" y="3300.0" />
+      <point x="0.0" y="1588.0" />
+      <point x="1338.6313433797009" y="1588.0" />
+      <point x="1338.6313433797009" y="1518.0" />
+      <point x="2909.943843379701" y="1518.0" />
+      <point x="-43.0" y="127.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.ControllerImpl" target="ua.edu.sumdu.j2se.radchenko.tasks.controller.ChangeTaskController" relationship="CREATE">
+      <point x="-94.875" y="-38.5" />
+      <point x="3505.1875" y="3180.0" />
+      <point x="839.7324188562595" y="3180.0" />
+      <point x="839.7324188562595" y="3160.0" />
+      <point x="712.4824188562595" y="3160.0" />
+      <point x="0.0" y="93.5" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.AddTaskController" target="ua.edu.sumdu.j2se.radchenko.tasks.model.AbstractTaskList" relationship="DEPENDENCY">
+      <point x="-87.0" y="-60.5" />
+      <point x="3338.770833333333" y="2929.0" />
+      <point x="2508.4824188562598" y="2929.0" />
+      <point x="2508.4824188562598" y="2799.0" />
+      <point x="3398.0230229263266" y="2799.0" />
+      <point x="3398.0230229263266" y="1588.0" />
+      <point x="1338.6313433797009" y="1588.0" />
+      <point x="1338.6313433797009" y="1518.0" />
+      <point x="2909.943843379701" y="1518.0" />
+      <point x="-43.0" y="127.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.DeleteTaskController" target="ua.edu.sumdu.j2se.radchenko.tasks.model.AbstractTaskList" relationship="DEPENDENCY">
+      <point x="-53.5" y="-49.5" />
+      <point x="1399.6896895929933" y="2819.0" />
+      <point x="1357.0" y="2819.0" />
+      <point x="1357.0" y="2142.0" />
+      <point x="1303.0" y="2142.0" />
+      <point x="1303.0" y="1588.0" />
+      <point x="1338.6313433797009" y="1588.0" />
+      <point x="1338.6313433797009" y="1518.0" />
+      <point x="2909.943843379701" y="1518.0" />
+      <point x="-43.0" y="127.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.ChangeTaskController" target="ua.edu.sumdu.j2se.radchenko.tasks.view.ChangeTaskView" relationship="DEPENDENCY">
+      <point x="-57.75" y="-93.5" />
+      <point x="654.7324188562595" y="2929.0" />
+      <point x="623.6896895929933" y="2929.0" />
+      <point x="623.6896895929933" y="2839.0" />
+      <point x="523.25" y="2839.0" />
+      <point x="58.25" y="236.5" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.ControllerImpl" target="ua.edu.sumdu.j2se.radchenko.tasks.controller.Controller" relationship="GENERALIZATION">
+      <point x="31.625" y="-38.5" />
+      <point x="3631.6875" y="3170.0" />
+      <point x="3656.439689592993" y="3170.0" />
+      <point x="3656.439689592993" y="2262.0" />
+      <point x="2146.814689592993" y="2262.0" />
+      <point x="0.0" y="72.5" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.view.CalendarView" target="ua.edu.sumdu.j2se.radchenko.tasks.view.View" relationship="REALIZATION">
+      <point x="51.75" y="-82.5" />
+      <point x="757.75" y="2282.0" />
+      <point x="716.5" y="2282.0" />
+      <point x="716.5" y="1913.0" />
+      <point x="1751.6666666666667" y="1913.0" />
+      <point x="-68.33333333333326" y="27.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.AddTaskController" target="ua.edu.sumdu.j2se.radchenko.tasks.view.View" relationship="DEPENDENCY">
+      <point x="-87.0" y="-60.5" />
+      <point x="3338.770833333333" y="2929.0" />
+      <point x="2508.4824188562598" y="2929.0" />
+      <point x="2508.4824188562598" y="2799.0" />
+      <point x="2645.939689592993" y="2799.0" />
+      <point x="2645.939689592993" y="1923.0" />
+      <point x="1820.0" y="1923.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.model.LinkedTaskList" target="ua.edu.sumdu.j2se.radchenko.tasks.model.ListTypes.types" relationship="DEPENDENCY">
+      <point x="-65.625" y="-127.0" />
+      <point x="2998.314689592993" y="751.0" />
+      <point x="2987.377189592993" y="751.0" />
+      <point x="2987.377189592993" y="741.0" />
+      <point x="2861.939689592993" y="741.0" />
+      <point x="0.0" y="49.5" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.view.ChangeTaskView" target="ua.edu.sumdu.j2se.radchenko.tasks.view.Action" relationship="REALIZATION">
+      <point x="58.25" y="-236.5" />
+      <point x="523.25" y="2252.0" />
+      <point x="940.375" y="2252.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.view.SaveLoadView" target="ua.edu.sumdu.j2se.radchenko.tasks.view.Action" relationship="REALIZATION">
+      <point x="51.25" y="-60.5" />
+      <point x="1230.25" y="2282.0" />
+      <point x="1184.0" y="2282.0" />
+      <point x="1184.0" y="2182.0" />
+      <point x="940.375" y="2182.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.model.TaskListFactory" target="ua.edu.sumdu.j2se.radchenko.tasks.model.LinkedTaskList" relationship="CREATE">
+      <point x="61.5" y="-38.5" />
+      <point x="2893.939689592993" y="1079.0" />
+      <point x="2872.439689592993" y="1079.0" />
+      <point x="2872.439689592993" y="1059.0" />
+      <point x="3020.189689592993" y="1059.0" />
+      <point x="-43.75" y="127.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.DeleteTaskController" target="ua.edu.sumdu.j2se.radchenko.tasks.controller.Errors" relationship="DEPENDENCY">
+      <point x="-53.5" y="-49.5" />
+      <point x="1399.6896895929933" y="2919.0" />
+      <point x="1640.5" y="2919.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.Controller" target="ua.edu.sumdu.j2se.radchenko.tasks.model.AbstractTaskList" relationship="DEPENDENCY">
+      <point x="-49.75" y="-72.5" />
+      <point x="2097.064689592993" y="1943.0" />
+      <point x="2270.939689592993" y="1943.0" />
+      <point x="2270.939689592993" y="1883.0" />
+      <point x="2228.0" y="1883.0" />
+      <point x="2228.0" y="1588.0" />
+      <point x="1338.6313433797009" y="1588.0" />
+      <point x="1338.6313433797009" y="1518.0" />
+      <point x="2909.943843379701" y="1518.0" />
+      <point x="-43.0" y="127.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.ControllerImpl" target="ua.edu.sumdu.j2se.radchenko.tasks.view.CheckAllTaskView" relationship="CREATE">
+      <point x="-94.875" y="-38.5" />
+      <point x="3505.1875" y="3180.0" />
+      <point x="839.7324188562595" y="3180.0" />
+      <point x="839.7324188562595" y="3160.0" />
+      <point x="226.0" y="3160.0" />
+      <point x="0.0" y="38.5" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.view.AddTaskView" target="ua.edu.sumdu.j2se.radchenko.tasks.view.View" relationship="REALIZATION">
+      <point x="51.75" y="-115.5" />
+      <point x="1522.75" y="2272.0" />
+      <point x="1335.5" y="2272.0" />
+      <point x="1335.5" y="1943.0" />
+      <point x="716.5" y="1943.0" />
+      <point x="716.5" y="1913.0" />
+      <point x="1751.6666666666667" y="1913.0" />
+      <point x="-68.33333333333326" y="27.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.model.LinkedTaskList.Node" target="ua.edu.sumdu.j2se.radchenko.tasks.model.Task" relationship="TO_ONE">
+      <point x="36.75" y="-72.0" />
+      <point x="3123.439689592993" y="524.0" />
+      <point x="3227.068843379701" y="524.0" />
+      <point x="3227.068843379701" y="494.0" />
+      <point x="3295.4230100463674" y="494.0" />
+      <point x="102.0" y="226.5" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.view.AddTaskView" target="ua.edu.sumdu.j2se.radchenko.tasks.controller.Controller" relationship="DEPENDENCY">
+      <point x="-51.75" y="-115.5" />
+      <point x="1419.25" y="2282.0" />
+      <point x="1324.5" y="2282.0" />
+      <point x="1324.5" y="2162.0" />
+      <point x="706.0" y="2162.0" />
+      <point x="706.0" y="2132.0" />
+      <point x="2080.48135625966" y="2132.0" />
+      <point x="-66.33333333333348" y="72.5" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.Controller" target="ua.edu.sumdu.j2se.radchenko.tasks.view.View" relationship="DEPENDENCY">
+      <point x="-49.75" y="-72.5" />
+      <point x="2097.064689592993" y="1943.0" />
+      <point x="2270.939689592993" y="1943.0" />
+      <point x="2270.939689592993" y="1903.0" />
+      <point x="1820.0" y="1903.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.ChangeTaskController" target="ua.edu.sumdu.j2se.radchenko.tasks.model.Task" relationship="DEPENDENCY">
+      <point x="-57.75" y="-93.5" />
+      <point x="654.7324188562595" y="2929.0" />
+      <point x="623.6896895929933" y="2929.0" />
+      <point x="623.6896895929933" y="2839.0" />
+      <point x="592.0" y="2839.0" />
+      <point x="592.0" y="514.0" />
+      <point x="1515.1313433797009" y="514.0" />
+      <point x="1515.1313433797009" y="484.0" />
+      <point x="3091.4230100463674" y="484.0" />
+      <point x="-102.0" y="226.5" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.view.CheckAllTaskView" target="ua.edu.sumdu.j2se.radchenko.tasks.controller.Controller" relationship="DEPENDENCY">
+      <point x="-51.25" y="-38.5" />
+      <point x="174.75" y="2282.0" />
+      <point x="383.25634337970087" y="2282.0" />
+      <point x="383.25634337970087" y="2222.0" />
+      <point x="706.0" y="2222.0" />
+      <point x="706.0" y="2132.0" />
+      <point x="2080.48135625966" y="2132.0" />
+      <point x="-66.33333333333348" y="72.5" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.view.ChangeTaskView" target="ua.edu.sumdu.j2se.radchenko.tasks.view.View" relationship="REALIZATION">
+      <point x="58.25" y="-236.5" />
+      <point x="523.25" y="1943.0" />
+      <point x="716.5" y="1943.0" />
+      <point x="716.5" y="1913.0" />
+      <point x="1751.6666666666667" y="1913.0" />
+      <point x="-68.33333333333326" y="27.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.Controller" target="ua.edu.sumdu.j2se.radchenko.tasks.controller.NotificatorController" relationship="TO_ONE">
+      <point x="49.75" y="-72.5" />
+      <point x="2196.564689592993" y="1933.0" />
+      <point x="2330.190752189593" y="1933.0" />
+      <point x="2330.190752189593" y="1893.0" />
+      <point x="2410.0" y="1893.0" />
+      <point x="0.0" y="38.5" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.SaveLoadController" target="ua.edu.sumdu.j2se.radchenko.tasks.view.View" relationship="DEPENDENCY">
+      <point x="-52.0" y="-60.5" />
+      <point x="1721.6896895929933" y="2809.0" />
+      <point x="1820.0" y="2809.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.view.AddTaskView" target="ua.edu.sumdu.j2se.radchenko.tasks.view.Action" relationship="REALIZATION">
+      <point x="51.75" y="-115.5" />
+      <point x="1522.75" y="2272.0" />
+      <point x="1335.5" y="2272.0" />
+      <point x="1335.5" y="2152.0" />
+      <point x="940.375" y="2152.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.view.ViewImpl" target="ua.edu.sumdu.j2se.radchenko.tasks.view.View" relationship="REALIZATION">
+      <point x="51.25" y="-38.5" />
+      <point x="164.25" y="1943.0" />
+      <point x="716.5" y="1943.0" />
+      <point x="716.5" y="1913.0" />
+      <point x="1751.6666666666667" y="1913.0" />
+      <point x="-68.33333333333326" y="27.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.CalendarController" target="ua.edu.sumdu.j2se.radchenko.tasks.view.View" relationship="DEPENDENCY">
+      <point x="-51.25" y="-38.5" />
+      <point x="1128.5646895929933" y="2829.0" />
+      <point x="1292.0" y="2829.0" />
+      <point x="1292.0" y="1923.0" />
+      <point x="1820.0" y="1923.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.view.NotificatorView" target="ua.edu.sumdu.j2se.radchenko.tasks.controller.Controller" relationship="DEPENDENCY">
+      <point x="-78.33333333333348" y="38.5" />
+      <point x="3406.60635625966" y="1508.0" />
+      <point x="3389.270833333333" y="1508.0" />
+      <point x="3389.270833333333" y="1568.0" />
+      <point x="2228.0" y="1568.0" />
+      <point x="2228.0" y="1883.0" />
+      <point x="2270.939689592993" y="1883.0" />
+      <point x="2270.939689592993" y="1943.0" />
+      <point x="2097.064689592993" y="1943.0" />
+      <point x="-49.75" y="-72.5" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.view.SaveLoadView" target="ua.edu.sumdu.j2se.radchenko.tasks.model.AbstractTaskList" relationship="DEPENDENCY">
+      <point x="-51.25" y="-60.5" />
+      <point x="1127.75" y="2282.0" />
+      <point x="1174.0" y="2282.0" />
+      <point x="1174.0" y="1588.0" />
+      <point x="1338.6313433797009" y="1588.0" />
+      <point x="1338.6313433797009" y="1518.0" />
+      <point x="2909.943843379701" y="1518.0" />
+      <point x="-43.0" y="127.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.view.CalendarView" target="ua.edu.sumdu.j2se.radchenko.tasks.model.Task" relationship="DEPENDENCY">
+      <point x="-51.75" y="-82.5" />
+      <point x="654.25" y="2282.0" />
+      <point x="700.75" y="2282.0" />
+      <point x="700.75" y="2202.0" />
+      <point x="669.875" y="2202.0" />
+      <point x="669.875" y="514.0" />
+      <point x="1515.1313433797009" y="514.0" />
+      <point x="1515.1313433797009" y="484.0" />
+      <point x="3091.4230100463674" y="484.0" />
+      <point x="-102.0" y="226.5" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.Main" target="ua.edu.sumdu.j2se.radchenko.tasks.controller.ControllerImpl" relationship="CREATE">
+      <point x="37.25" y="-38.5" />
+      <point x="1921.7563433797009" y="3310.0" />
+      <point x="3668.5625" y="3310.0" />
+      <point x="3668.5625" y="3300.0" />
+      <point x="3600.0625" y="3300.0" />
+      <point x="0.0" y="38.5" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.model.AbstractTaskList" target="ua.edu.sumdu.j2se.radchenko.tasks.model.ListTypes" relationship="DEPENDENCY">
+      <point x="-43.0" y="-127.0" />
+      <point x="2909.943843379701" y="1210.0" />
+      <point x="2776.881343379701" y="1210.0" />
+      <point x="2776.881343379701" y="1200.0" />
+      <point x="2965.939689592993" y="1200.0" />
+      <point x="2965.939689592993" y="534.0" />
+      <point x="2915.631343379701" y="534.0" />
+      <point x="2915.631343379701" y="474.0" />
+      <point x="2891.631343379701" y="474.0" />
+      <point x="28.0" y="27.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.DeleteTaskController" target="ua.edu.sumdu.j2se.radchenko.tasks.view.View" relationship="DEPENDENCY">
+      <point x="-53.5" y="-49.5" />
+      <point x="1399.6896895929933" y="2819.0" />
+      <point x="1585.0" y="2819.0" />
+      <point x="1585.0" y="1923.0" />
+      <point x="1820.0" y="1923.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.ControllerImpl" target="ua.edu.sumdu.j2se.radchenko.tasks.view.CalendarView" relationship="CREATE">
+      <point x="-94.875" y="-38.5" />
+      <point x="3505.1875" y="3180.0" />
+      <point x="839.7324188562595" y="3180.0" />
+      <point x="839.7324188562595" y="3160.0" />
+      <point x="450.0" y="3160.0" />
+      <point x="450.0" y="2849.0" />
+      <point x="654.25" y="2849.0" />
+      <point x="-51.75" y="82.5" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.ControllerImpl" target="ua.edu.sumdu.j2se.radchenko.tasks.view.NotificatorView" relationship="CREATE">
+      <point x="-94.875" y="-38.5" />
+      <point x="3505.1875" y="3180.0" />
+      <point x="839.7324188562595" y="3180.0" />
+      <point x="839.7324188562595" y="3160.0" />
+      <point x="3634.439689592993" y="3160.0" />
+      <point x="3634.439689592993" y="1578.0" />
+      <point x="3563.273022926327" y="1578.0" />
+      <point x="78.33333333333348" y="38.5" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.view.ChangeTaskView" target="ua.edu.sumdu.j2se.radchenko.tasks.model.AbstractTaskList" relationship="DEPENDENCY">
+      <point x="-58.25" y="-236.5" />
+      <point x="406.75" y="2282.0" />
+      <point x="405.25634337970087" y="2282.0" />
+      <point x="405.25634337970087" y="1588.0" />
+      <point x="1338.6313433797009" y="1588.0" />
+      <point x="1338.6313433797009" y="1518.0" />
+      <point x="2909.943843379701" y="1518.0" />
+      <point x="-43.0" y="127.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.ControllerImpl" target="ua.edu.sumdu.j2se.radchenko.tasks.controller.CheckAllTaskController" relationship="CREATE">
+      <point x="-94.875" y="-38.5" />
+      <point x="3505.1875" y="3180.0" />
+      <point x="839.7324188562595" y="3180.0" />
+      <point x="839.7324188562595" y="3160.0" />
+      <point x="2440.9824188562598" y="3160.0" />
+      <point x="0.0" y="38.5" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.CalendarController" target="ua.edu.sumdu.j2se.radchenko.tasks.view.CalendarView" relationship="DEPENDENCY">
+      <point x="-51.25" y="-38.5" />
+      <point x="1128.5646895929933" y="2829.0" />
+      <point x="757.75" y="2829.0" />
+      <point x="51.75" y="82.5" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.ControllerImpl" target="ua.edu.sumdu.j2se.radchenko.tasks.model.AbstractTaskList" relationship="TO_ONE">
+      <point x="94.875" y="-38.5" />
+      <point x="3694.9375" y="3180.0" />
+      <point x="3667.439689592993" y="3180.0" />
+      <point x="3667.439689592993" y="3170.0" />
+      <point x="3677.939689592993" y="3170.0" />
+      <point x="3677.939689592993" y="1568.0" />
+      <point x="3505.818843379701" y="1568.0" />
+      <point x="3505.818843379701" y="1518.0" />
+      <point x="2995.943843379701" y="1518.0" />
+      <point x="43.0" y="127.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.ChangeTaskController" target="ua.edu.sumdu.j2se.radchenko.tasks.view.View" relationship="DEPENDENCY">
+      <point x="-57.75" y="-93.5" />
+      <point x="654.7324188562595" y="2929.0" />
+      <point x="623.6896895929933" y="2929.0" />
+      <point x="623.6896895929933" y="2839.0" />
+      <point x="820.0" y="2839.0" />
+      <point x="820.0" y="1923.0" />
+      <point x="1820.0" y="1923.0" />
+      <point x="0.0" y="27.0" />
     </edge>
     <edge source="ua.edu.sumdu.j2se.radchenko.tasks.model.LinkedTaskList" target="ua.edu.sumdu.j2se.radchenko.tasks.model.LinkedTaskList.Node" relationship="TO_ONE">
-      <point x="-21.875" y="-128.0" />
-      <point x="816.4534078807234" y="696.0" />
-      <point x="1003.0" y="696.0" />
-      <point x="-49.0" y="73.0" />
+      <point x="-21.875" y="-127.0" />
+      <point x="3042.064689592993" y="751.0" />
+      <point x="3037.689689592993" y="751.0" />
+      <point x="-49.0" y="72.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.radchenko.tasks.controller.ControllerImpl" target="ua.edu.sumdu.j2se.radchenko.tasks.controller.NotificatorController" relationship="CREATE">
+      <point x="-94.875" y="-38.5" />
+      <point x="3505.1875" y="3180.0" />
+      <point x="839.7324188562595" y="3180.0" />
+      <point x="839.7324188562595" y="3160.0" />
+      <point x="3623.939689592993" y="3160.0" />
+      <point x="3623.939689592993" y="1913.0" />
+      <point x="2524.3333333333335" y="1913.0" />
+      <point x="114.33333333333348" y="38.5" />
     </edge>
   </edges>
-  <settings layout="Hierarchic" zoom="0.32656826568265684" showDependencies="true" x="673.0" y="1345.0" />
+  <settings layout="Hierarchic" zoom="0.40816802800466745" showDependencies="true" x="1827.601852874766" y="1827.1305801862563" />
   <SelectedNodes />
   <Categories>
     <Category>Constructors</Category>
