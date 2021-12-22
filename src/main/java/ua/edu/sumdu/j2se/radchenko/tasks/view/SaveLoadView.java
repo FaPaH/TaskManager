@@ -1,6 +1,7 @@
 package ua.edu.sumdu.j2se.radchenko.tasks.view;
 
 import ua.edu.sumdu.j2se.radchenko.tasks.controller.Controller;
+import ua.edu.sumdu.j2se.radchenko.tasks.controller.Errors;
 import ua.edu.sumdu.j2se.radchenko.tasks.model.AbstractTaskList;
 
 import java.io.IOException;
@@ -46,7 +47,7 @@ public class SaveLoadView implements Action, View{
             System.out.println("Type name file");
             fileName = reader.readLine();
         } catch (IOException e){
-            e.printStackTrace();
+            logger.error(Errors.UNEXPECTED_DATA);
         }
         return fileName;
     }

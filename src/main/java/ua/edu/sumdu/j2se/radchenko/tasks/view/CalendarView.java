@@ -1,6 +1,7 @@
 package ua.edu.sumdu.j2se.radchenko.tasks.view;
 
 import ua.edu.sumdu.j2se.radchenko.tasks.controller.Controller;
+import ua.edu.sumdu.j2se.radchenko.tasks.controller.Errors;
 import ua.edu.sumdu.j2se.radchenko.tasks.model.AbstractTaskList;
 import ua.edu.sumdu.j2se.radchenko.tasks.model.Task;
 import ua.edu.sumdu.j2se.radchenko.tasks.model.Tasks;
@@ -33,10 +34,24 @@ public class CalendarView implements View, Action{
     @Override
     public int printInfo(AbstractTaskList taskList) {
         LocalDateTime startTime = startTime();
+
+        if (startTime.isEqual(Errors.START_EPOCH)){
+            logger.error(Errors.UNEXPECTED_START_TIME);
+            System.out.println("Wrong start time");
+            return Controller.CALENDAR;
+        }
+
         LocalDateTime endTime = endTime();
 
+        if (endTime.isEqual(Errors.START_EPOCH)){
+            logger.error(Errors.UNEXPECTED_END_TIME);
+            System.out.println("Wrong end time");
+            return Controller.CALENDAR;
+        }
+
         if (endTime.isBefore(LocalDateTime.now())){
-            System.out.println("Unexpected end time");
+            logger.error(Errors.UNEXPECTED_END_TIME);
+            System.out.println("Wrong end time");
             return Controller.CALENDAR;
         }
 
@@ -72,7 +87,7 @@ public class CalendarView implements View, Action{
         try {
             date = reader.readLine();
         }catch (IOException | NumberFormatException e){
-            e.printStackTrace();
+            logger.error(Errors.UNEXPECTED_DATA);
         }
 
         try {

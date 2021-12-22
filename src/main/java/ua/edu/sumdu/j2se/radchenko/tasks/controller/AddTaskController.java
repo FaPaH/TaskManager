@@ -4,6 +4,7 @@ import org.apache.log4j.Logger;
 import ua.edu.sumdu.j2se.radchenko.tasks.model.AbstractTaskList;
 import ua.edu.sumdu.j2se.radchenko.tasks.model.Task;
 import ua.edu.sumdu.j2se.radchenko.tasks.view.AddTaskView;
+import ua.edu.sumdu.j2se.radchenko.tasks.view.ChangeTaskView;
 import ua.edu.sumdu.j2se.radchenko.tasks.view.View;
 
 import java.io.IOException;
@@ -16,15 +17,22 @@ public class AddTaskController extends Controller{
     }
 
     @Override
-    public int process(AbstractTaskList taskList) throws IOException {
-        Task task;
+    public int process(AbstractTaskList taskList) {
         int taskChoose = ((AddTaskView) view).chosenAction();
 
         if (taskChoose == 1){
-            addNonRepeatTask(taskList);
+            if(addNonRepeatTask(taskList) == MAIN_MENU){
+                ((AddTaskView) view).success();
+            } else {
+                ((AddTaskView) view).unSuccess();
+            }
         }
         else if (taskChoose == 2){
-            addRepeatTask(taskList);
+            if(addRepeatTask(taskList) == MAIN_MENU){
+                ((AddTaskView) view).success();
+            } else {
+                ((AddTaskView) view).unSuccess();
+            }
         }
         else if (taskChoose == 3){
             return Controller.MAIN_MENU;
@@ -40,25 +48,43 @@ public class AddTaskController extends Controller{
         Task task;
         String name = ((AddTaskView) view).taskName();
         LocalDateTime start = ((AddTaskView) view).startTime();
+
+        if (start.isEqual(Errors.START_EPOCH)){
+            getLogger().error(Errors.UNEXPECTED_START_TIME);
+            ((AddTaskView) view).wrongStartTime();
+            return ADD_TASK;
+        }
+
         LocalDateTime end = ((AddTaskView) view).endTime();
+
+        if (end.isEqual(Errors.START_EPOCH)){
+            getLogger().error(Errors.UNEXPECTED_END_TIME);
+            ((AddTaskView) view).wrongEndTime();
+            return ADD_TASK;
+        }
+
         int interval = ((AddTaskView) view).repeatInterval();
 
+        if (interval == Integer.MAX_VALUE || interval < 0){
+            getLogger().error(Errors.UNEXPECTED_INTERVAL);
+            ((AddTaskView) view).wrongInterval();
+            return ADD_TASK;
+        }
         if (end.isBefore(start)){
             getLogger().error(Errors.UNEXPECTED_END_TIME);
+            ((AddTaskView) view).wrongStartTime();
             return ADD_TASK;
         }
         if (end.isBefore(LocalDateTime.now())){
             getLogger().error(Errors.UNEXPECTED_END_TIME);
+            ((AddTaskView) view).wrongEndTime();
             return ADD_TASK;
         }
-        if (interval == Integer.MAX_VALUE || interval < 0){
-            getLogger().error(Errors.UNEXPECTED_INTERVAL);
-            return ADD_TASK;
-        }
+
         task = new Task(name, start, end, interval);
         task.setActive(true);
         taskList.add(task);
-        return ADD_TASK;
+        return MAIN_MENU;
     }
 
     private int addNonRepeatTask(AbstractTaskList taskList){
@@ -66,14 +92,21 @@ public class AddTaskController extends Controller{
         String name = ((AddTaskView) view).taskName();
         LocalDateTime time = ((AddTaskView) view).timeTask();
 
+        if (time.isEqual(Errors.START_EPOCH)){
+            getLogger().error(Errors.UNEXPECTED_TIME);
+            ((AddTaskView) view).wrongTime();
+            return ADD_TASK;
+        }
+
         if (time.isBefore(LocalDateTime.now())){
             getLogger().error(Errors.UNEXPECTED_TIME);
+            ((AddTaskView) view).wrongTime();
             return ADD_TASK;
         }
 
         task = new Task(name, time);
         task.setActive(true);
         taskList.add(task);
-        return ADD_TASK;
+        return MAIN_MENU;
     }
 }

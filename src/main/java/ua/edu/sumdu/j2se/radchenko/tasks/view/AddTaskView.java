@@ -1,6 +1,7 @@
 package ua.edu.sumdu.j2se.radchenko.tasks.view;
 
 import ua.edu.sumdu.j2se.radchenko.tasks.controller.Controller;
+import ua.edu.sumdu.j2se.radchenko.tasks.controller.Errors;
 import ua.edu.sumdu.j2se.radchenko.tasks.model.AbstractTaskList;
 
 import java.io.IOException;
@@ -14,7 +15,6 @@ public class AddTaskView implements View, Action{
 
     @Override
     public int printInfo(AbstractTaskList taskList) {
-        System.out.println("Task is added to list");
         return Controller.ADD_TASK;
     }
 
@@ -37,15 +37,24 @@ public class AddTaskView implements View, Action{
         try {
             name = reader.readLine();
         }catch (IOException e){
-            e.printStackTrace();
+            logger.error(Errors.UNEXPECTED_DATA);
         }
         return name;
+    }
+
+    public void success(){
+        System.out.println("Task is added to list");
+    }
+
+    public void unSuccess(){
+        System.out.println("Task is NOT added to list");
     }
 
     public LocalDateTime timeTask(){
         System.out.print("Enter the due date for the task (example yyyy-MM-dd HH:mm = 2021-12-13 12:30): ");
         return stringToTime();
     }
+
 
     public LocalDateTime startTime(){
         System.out.print("Enter the start time for the task (example yyyy-MM-dd HH:mm = 2021-12-13 12:30): ");
@@ -55,6 +64,22 @@ public class AddTaskView implements View, Action{
     public LocalDateTime endTime(){
         System.out.print("Enter the end time for the task (example yyyy-MM-dd HH:mm = 2021-12-13 12:30): ");
         return stringToTime();
+    }
+
+    public void wrongStartTime(){
+        System.out.println("Wrong start time, expected 2021-12-13 12:30");
+    }
+
+    public void wrongEndTime(){
+        System.out.println("Wrong start time, expected 2021-12-13 12:30");
+    }
+
+    public void wrongTime(){
+        System.out.println("Wrong start time, expected 2021-12-13 12:30");
+    }
+
+    public void wrongInterval(){
+        System.out.println("Wrong interval, please type numbers with out letters");
     }
 
     public int repeatInterval(){
@@ -75,14 +100,14 @@ public class AddTaskView implements View, Action{
         try {
             date = reader.readLine();
         }catch (IOException | NumberFormatException e){
-            e.printStackTrace();
+            logger.error(Errors.UNEXPECTED_DATA);
         }
 
         try {
             DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
             timeHolder = LocalDateTime.parse(date, dateTimeFormatter);
         }catch (DateTimeParseException e){
-            return LocalDateTime.ofEpochSecond(1, 1, ZoneOffset.UTC);
+            return LocalDateTime.ofEpochSecond(1, 1, ZoneOffset.UTC).minusSeconds(0).minusNanos(0);
         }
         return timeHolder;
     }

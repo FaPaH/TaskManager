@@ -1,6 +1,7 @@
 package ua.edu.sumdu.j2se.radchenko.tasks.view;
 
 import ua.edu.sumdu.j2se.radchenko.tasks.controller.Controller;
+import ua.edu.sumdu.j2se.radchenko.tasks.controller.Errors;
 import ua.edu.sumdu.j2se.radchenko.tasks.model.AbstractTaskList;
 import ua.edu.sumdu.j2se.radchenko.tasks.model.Task;
 
@@ -26,13 +27,13 @@ public class ChangeTaskView implements View, Action{
 
     public int repTask(){
         System.out.println("Choose option");
-        System.out.println("1 - change name, 2 - change start,end time and interval, 5 - go back to manu");
+        System.out.println("1 - change name, 2 - change start,end time and interval, 3 - go back to manu");
         return consoleEntry();
     }
 
     public int nonRepTask(){
         System.out.println("Choose option");
-        System.out.println("1 - change name, 2 - change time, 5 - go back to manu");
+        System.out.println("1 - change name, 2 - change time, 3 - go back to manu");
         return consoleEntry();
     }
 
@@ -48,11 +49,11 @@ public class ChangeTaskView implements View, Action{
         System.out.println("Current end time: " + task.getEndTime());
     }
 
-    public void printCurrentTime(Task task){
+    public void printCurrentInterval(Task task){
         System.out.println("Current interval: " + task.getRepeatInterval());
     }
 
-    public void printCurrentInterval(Task task){
+    public void printCurrentTime(Task task){
         System.out.println("Current time: " + task.getTime());
     }
 
@@ -67,22 +68,22 @@ public class ChangeTaskView implements View, Action{
     }
 
     public LocalDateTime newTaskTime(){
-        System.out.println("Type new time: ");
+        System.out.println("Type new time (example yyyy-MM-dd HH:mm = 2021-12-13 12:30): ");
         return stringToTime();
     }
 
     public LocalDateTime newTaskStartTime(){
-        System.out.println("Type new start time: ");
+        System.out.println("Type new start time (example yyyy-MM-dd HH:mm = 2021-12-13 12:30): ");
         return stringToTime();
     }
 
     public LocalDateTime newTaskEndTime(){
-        System.out.println("Type new end time: ");
+        System.out.println("Type new end time (example yyyy-MM-dd HH:mm = 2021-12-13 12:30): ");
         return stringToTime();
     }
 
     public int newTaskInterval(){
-        System.out.println("Type new interval: ");
+        System.out.println("Type new interval in minutes: ");
         return consoleEntry();
     }
 
@@ -103,7 +104,7 @@ public class ChangeTaskView implements View, Action{
         try {
             stringEntry = reader.readLine();
         } catch (IOException e){
-            e.printStackTrace();
+            logger.error(Errors.UNEXPECTED_DATA);
         }
         return stringEntry;
     }
@@ -113,6 +114,22 @@ public class ChangeTaskView implements View, Action{
         return consoleEntry();
     }
 
+    public void wrongStartTime(){
+        System.out.println("Wrong start time, expected 2021-12-13 12:30");
+    }
+
+    public void wrongEndTime(){
+        System.out.println("Wrong start time, expected 2021-12-13 12:30");
+    }
+
+    public void wrongTime(){
+        System.out.println("Wrong start time, expected 2021-12-13 12:30");
+    }
+
+    public void wrongInterval(){
+        System.out.println("Wrong interval, please type numbers with out letters");
+    }
+
     private LocalDateTime stringToTime(){
         String date = "null";
         LocalDateTime timeHolder = null;
@@ -120,7 +137,7 @@ public class ChangeTaskView implements View, Action{
         try {
             date = reader.readLine();
         }catch (IOException | NumberFormatException e){
-            e.printStackTrace();
+            logger.error(Errors.UNEXPECTED_DATA);
         }
 
         try {

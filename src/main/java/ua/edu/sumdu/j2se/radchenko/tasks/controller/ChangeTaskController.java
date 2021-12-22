@@ -2,6 +2,7 @@ package ua.edu.sumdu.j2se.radchenko.tasks.controller;
 
 import ua.edu.sumdu.j2se.radchenko.tasks.model.AbstractTaskList;
 import ua.edu.sumdu.j2se.radchenko.tasks.model.Task;
+import ua.edu.sumdu.j2se.radchenko.tasks.view.AddTaskView;
 import ua.edu.sumdu.j2se.radchenko.tasks.view.ChangeTaskView;
 import ua.edu.sumdu.j2se.radchenko.tasks.view.DeleteTaskView;
 import ua.edu.sumdu.j2se.radchenko.tasks.view.View;
@@ -93,27 +94,62 @@ public class ChangeTaskController extends Controller{
         Task currentTask = task;
         ((ChangeTaskView) view).printCurrentStartTime(task);
         LocalDateTime newStartTime = ((ChangeTaskView) view).newTaskStartTime();
+
+        if (newStartTime.isEqual(Errors.START_EPOCH)){
+            getLogger().error(Errors.UNEXPECTED_START_TIME);
+            ((ChangeTaskView) view).wrongStartTime();
+            return TASK_CHANGE;
+        }
+
         ((ChangeTaskView) view).printCurrentEndTime(task);
         LocalDateTime newEndTime = ((ChangeTaskView) view).newTaskEndTime();
+
+        if (newEndTime.isEqual(Errors.START_EPOCH)){
+            getLogger().error(Errors.UNEXPECTED_END_TIME);
+            ((ChangeTaskView) view).wrongStartTime();
+            return TASK_CHANGE;
+        }
+
         ((ChangeTaskView) view).printCurrentInterval(task);
         int newInterval = ((ChangeTaskView) view).newTaskInterval();
 
-        if (newStartTime.isAfter(newEndTime)){
-            getLogger().error(Errors.UNEXPECTED_START_TIME);
+        if (newInterval == Integer.MAX_VALUE || newInterval < 0){
+            getLogger().error(Errors.UNEXPECTED_INTERVAL);
+            ((ChangeTaskView) view).wrongInterval();
             return TASK_CHANGE;
         }
+
+        if (newStartTime.isAfter(newEndTime)){
+            getLogger().error(Errors.UNEXPECTED_START_TIME);
+            ((ChangeTaskView) view).wrongStartTime();
+            return TASK_CHANGE;
+        }
+
         if (newEndTime.isBefore(LocalDateTime.now())){
             getLogger().error(Errors.UNEXPECTED_END_TIME);
+            ((ChangeTaskView) view).wrongEndTime();
             return TASK_CHANGE;
         }
         currentTask.setTime(newStartTime, newEndTime, newInterval);
-        return TASK_CHANGE;
+        return MAIN_MENU;
     }
 
     private int changeNonRepTaskTime(Task task){
         Task currentTask = task;
         ((ChangeTaskView) view).printCurrentTime(task);
         LocalDateTime newTime = ((ChangeTaskView) view).newTaskTime();
+
+        if (newTime.isEqual(Errors.START_EPOCH)){
+            getLogger().error(Errors.UNEXPECTED_TIME);
+            ((ChangeTaskView) view).wrongTime();
+            return ADD_TASK;
+        }
+
+        if (newTime.isBefore(LocalDateTime.now())){
+            getLogger().error(Errors.UNEXPECTED_TIME);
+            ((ChangeTaskView) view).wrongTime();
+            return ADD_TASK;
+        }
 
         currentTask.setTime(newTime);
         return MAIN_MENU;

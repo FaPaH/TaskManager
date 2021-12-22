@@ -1,6 +1,7 @@
 package ua.edu.sumdu.j2se.radchenko.tasks.view;
 
 import ua.edu.sumdu.j2se.radchenko.tasks.controller.Controller;
+import ua.edu.sumdu.j2se.radchenko.tasks.controller.Errors;
 import ua.edu.sumdu.j2se.radchenko.tasks.model.AbstractTaskList;
 
 import java.io.IOException;
@@ -34,7 +35,7 @@ public class DeleteTaskView implements View, Action{
         try {
             id = Integer.parseInt(reader.readLine());
         }catch (IOException | NumberFormatException e){
-            e.printStackTrace();
+            logger.error(Errors.UNEXPECTED_DATA);
         }
         return id;
     }
