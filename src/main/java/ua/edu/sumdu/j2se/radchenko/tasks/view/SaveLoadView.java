@@ -35,6 +35,11 @@ public class SaveLoadView implements Action, View{
         return Controller.MAIN_MENU;
     }
 
+    public int fileNotFound(){
+        System.out.println("File not found");
+        return Controller.SAVE_LOAD;
+    }
+
     public String fileName(){
         String fileName = "";
         try {

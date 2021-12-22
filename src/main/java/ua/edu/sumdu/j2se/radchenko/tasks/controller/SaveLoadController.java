@@ -25,10 +25,18 @@ public class SaveLoadController extends Controller{
         directory.mkdir();
 
         if (taskChoose == 1){
-            Save(taskList);
+            if (Save(taskList)){
+                return view.printInfo(taskList);
+            } else {
+                ((SaveLoadView) view).fileNotFound();
+            }
         }
         else if (taskChoose == 2){
-            Load(taskList);
+            if (Load(taskList)){
+                return view.printInfo(taskList);
+            } else {
+                ((SaveLoadView) view).fileNotFound();
+            }
         }
         else if (taskChoose == 3){
             return MAIN_MENU;
@@ -37,28 +45,30 @@ public class SaveLoadController extends Controller{
             return Controller.SAVE_LOAD;
         }
 
-        return view.printInfo(taskList);
+        return Controller.MAIN_MENU;
     }
 
-    private void Save(AbstractTaskList taskList){
+    private boolean Save(AbstractTaskList taskList){
         try {
             String nameFile = ((SaveLoadView) view).fileName();
             File saveFile = new File(SAVE_DIRECTORY + "/" + nameFile + FILE_FORMAT);
             TaskIO.write(taskList, new FileWriter(saveFile));
         } catch (IOException e){
             getLogger().error(Errors.FILE_NOT_FOUND);
-            e.printStackTrace();
+            return false;
         }
+        return true;
     }
 
-    private void Load(AbstractTaskList taskList){
+    private boolean Load(AbstractTaskList taskList){
         try {
             String nameFile = ((SaveLoadView) view).fileName();
             File saveFile = new File(SAVE_DIRECTORY + "/" + nameFile + FILE_FORMAT);
             TaskIO.read(taskList, new FileReader(saveFile));
         } catch (IOException e){
             getLogger().error(Errors.FILE_NOT_FOUND);
-            e.printStackTrace();
+            return false;
         }
+        return true;
     }
 }
