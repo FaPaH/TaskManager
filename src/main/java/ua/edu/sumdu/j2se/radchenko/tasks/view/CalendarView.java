@@ -1,5 +1,6 @@
 package ua.edu.sumdu.j2se.radchenko.tasks.view;
 
+import ua.edu.sumdu.j2se.radchenko.tasks.controller.Constant;
 import ua.edu.sumdu.j2se.radchenko.tasks.controller.Controller;
 import ua.edu.sumdu.j2se.radchenko.tasks.controller.Errors;
 import ua.edu.sumdu.j2se.radchenko.tasks.model.AbstractTaskList;
@@ -35,7 +36,7 @@ public class CalendarView implements View, Action{
     public int printInfo(AbstractTaskList taskList) {
         LocalDateTime startTime = startTime();
 
-        if (startTime.isEqual(Errors.START_EPOCH)){
+        if (startTime.isEqual(Constant.START_EPOCH)){
             logger.error(Errors.UNEXPECTED_START_TIME);
             System.out.println("Wrong start time");
             return Controller.CALENDAR;
@@ -43,7 +44,7 @@ public class CalendarView implements View, Action{
 
         LocalDateTime endTime = endTime();
 
-        if (endTime.isEqual(Errors.START_EPOCH)){
+        if (endTime.isEqual(Constant.START_EPOCH)){
             logger.error(Errors.UNEXPECTED_END_TIME);
             System.out.println("Wrong end time");
             return Controller.CALENDAR;

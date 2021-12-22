@@ -49,7 +49,7 @@ public class AddTaskController extends Controller{
         String name = ((AddTaskView) view).taskName();
         LocalDateTime start = ((AddTaskView) view).startTime();
 
-        if (start.isEqual(Errors.START_EPOCH)){
+        if (start.isEqual(Constant.START_EPOCH)){
             getLogger().error(Errors.UNEXPECTED_START_TIME);
             ((AddTaskView) view).wrongStartTime();
             return ADD_TASK;
@@ -57,15 +57,15 @@ public class AddTaskController extends Controller{
 
         LocalDateTime end = ((AddTaskView) view).endTime();
 
-        if (end.isEqual(Errors.START_EPOCH)){
+        if (end.isEqual(Constant.START_EPOCH)){
             getLogger().error(Errors.UNEXPECTED_END_TIME);
             ((AddTaskView) view).wrongEndTime();
             return ADD_TASK;
         }
 
-        int interval = ((AddTaskView) view).repeatInterval();
+        int interval = ((AddTaskView) view).repeatInterval() * Constant.SECONDS_60;
 
-        if (interval == Integer.MAX_VALUE || interval < 0){
+        if (interval < 0){
             getLogger().error(Errors.UNEXPECTED_INTERVAL);
             ((AddTaskView) view).wrongInterval();
             return ADD_TASK;
@@ -92,7 +92,7 @@ public class AddTaskController extends Controller{
         String name = ((AddTaskView) view).taskName();
         LocalDateTime time = ((AddTaskView) view).timeTask();
 
-        if (time.isEqual(Errors.START_EPOCH)){
+        if (time.isEqual(Constant.START_EPOCH)){
             getLogger().error(Errors.UNEXPECTED_TIME);
             ((AddTaskView) view).wrongTime();
             return ADD_TASK;

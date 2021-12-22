@@ -95,7 +95,7 @@ public class ChangeTaskController extends Controller{
         ((ChangeTaskView) view).printCurrentStartTime(task);
         LocalDateTime newStartTime = ((ChangeTaskView) view).newTaskStartTime();
 
-        if (newStartTime.isEqual(Errors.START_EPOCH)){
+        if (newStartTime.isEqual(Constant.START_EPOCH)){
             getLogger().error(Errors.UNEXPECTED_START_TIME);
             ((ChangeTaskView) view).wrongStartTime();
             return TASK_CHANGE;
@@ -104,7 +104,7 @@ public class ChangeTaskController extends Controller{
         ((ChangeTaskView) view).printCurrentEndTime(task);
         LocalDateTime newEndTime = ((ChangeTaskView) view).newTaskEndTime();
 
-        if (newEndTime.isEqual(Errors.START_EPOCH)){
+        if (newEndTime.isEqual(Constant.START_EPOCH)){
             getLogger().error(Errors.UNEXPECTED_END_TIME);
             ((ChangeTaskView) view).wrongStartTime();
             return TASK_CHANGE;
@@ -139,7 +139,7 @@ public class ChangeTaskController extends Controller{
         ((ChangeTaskView) view).printCurrentTime(task);
         LocalDateTime newTime = ((ChangeTaskView) view).newTaskTime();
 
-        if (newTime.isEqual(Errors.START_EPOCH)){
+        if (newTime.isEqual(Constant.START_EPOCH)){
             getLogger().error(Errors.UNEXPECTED_TIME);
             ((ChangeTaskView) view).wrongTime();
             return ADD_TASK;
